@@ -59,24 +59,33 @@ assets
 - LinkedIn logo `color: #ffffff`
 -  Github logo `color: #ffffff`
 
-## Beach Theme
+## Ocean Theme
 
-beach navbar name `color: #025762;`
+ocean navbar name `color: #025762;`
 
-beach nabvar hamburgerMenu `color: #025762;`
+ocean nabvar hamburgerMenu `color: #025762;`
 
-beach navbar x `color: #025762;`
+ocean navbar x `color: #025762;`
 
-beach navbar text `background-color: #025762;`
+ocean navbar text `background-color: #025762;`
 
-beach assets 
+ocean assets 
 
 - LinkedIn logo `color: #025762;`
 -  Github logo `color: #025762;`
 
-beach desktop navbar `color: #025762; opacity: 0.65;`
+ocean desktop navbar `color: #025762; opacity: 0.65;`
 
 
 # HTML
 
+## body
+Background image of mountain or ocean
+
+## header / nav
+Create a navbar. It will have "MK" on left and hamburger menu on the right.
+When in desktop view, the navbar will be a side panel extending from top to bottom of screen.
 ## main
+Create a main section.
+## div
+This section will act as the viewscreen for any item selected (bio, projects, resume, etc.)
