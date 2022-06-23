@@ -54,33 +54,37 @@ desktop navbar open `display: block; background-color: #5f6d6a; opacity: 35;`
 
 desktop navbar text `color: #5f6d6a; background-color: #ffffff`
 
+desktop x `color: #5f6d6a`
+
 assets
 
 - LinkedIn logo `color: #ffffff`
 -  Github logo `color: #ffffff`
 
-## Ocean Theme
+## Fish Theme
 
-ocean navbar name `color: #025762;`
+fish navbar name `color: #025762;`
 
-ocean nabvar hamburgerMenu `color: #025762;`
+fish nabvar hamburgerMenu `color: #025762;`
 
-ocean navbar x `color: #025762;`
+fish navbar x `color: #025762;`
 
-ocean navbar text `background-color: #025762;`
+fish navbar text `background-color: #025762;`
 
-ocean assets 
+fish assets 
 
 - LinkedIn logo `color: #025762;`
 -  Github logo `color: #025762;`
 
-ocean desktop navbar `color: #025762; opacity: 0.65;`
+fish desktop navbar `color: #025762; opacity: 0.65;`
+
+fish desktop x `color: #025762`
 
 
 # HTML
 
 ## body
-Background image of mountain or ocean
+Background image of leaf or fish
 
 ## header / nav
 Create a navbar. It will have "MK" on left and hamburger menu on the right.
@@ -89,3 +93,19 @@ When in desktop view, the navbar will be a side panel extending from top to bott
 Create a main section.
 ## div
 This section will act as the viewscreen for any item selected (bio, projects, resume, etc.)
+
+# Javascript
+
+## Event Listeners
+Need to listen to: "bio, projects, resume, hamburger, navbar x, desktop x, linkedin, github, fish, leaf"
+
+- bio - open bio page
+- projects - open projects page
+- resume - open resume page
+- hamburger - open navbar down
+- navbar x - close navbar
+- desktop x - close desktop
+- linkedin - go to linkedin page
+- github - go to github page
+- fish - switch to fish design
+- leaf - switch to leaf design
