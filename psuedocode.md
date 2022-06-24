@@ -109,3 +109,8 @@ Need to listen to: "bio, projects, resume, hamburger, navbar x, desktop x, linke
 - github - go to github page
 - fish - switch to fish design
 - leaf - switch to leaf design
+
+# Day 2
+
+## Follow up from yesterday
+

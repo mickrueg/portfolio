@@ -6,8 +6,9 @@ body {
     background-attachment: fixed;
     font-family: 'Source Sans Pro', sans-serif;
     font-size: x-large;
-    letter-spacing: .1em;
+    letter-spacing: .2em;
     width: 100%;
+    min-width: 375px;
     height: 100vh;
     overflow: hidden;
     margin: 0;
@@ -37,20 +38,20 @@ nav .topbar {
     color: #5f6d6a;
     opacity: 1;
     margin-top: 0;
+    
 }
 
 nav .top.collapsed{
     color: #5f6d6a;
-    opacity: 1;
     margin-top: 0;
     background-color: rgb(255, 255, 255,0.65);
-    display: none;
+    /* display: none; */
 }
 
 nav .top.expanded {
     height: 100%;
     background-color: rgb(255, 255, 255,0.65);
-    /* display: none; */
+    display: none;
 }
 
 
@@ -59,8 +60,8 @@ nav .top.expanded .name {
 }
 
 img.hamburger  {
-    height: 35px;
-    width: 35px;
+    height: 25px;
+    width: 25px;
     padding-top: 3px;
 }
 
@@ -122,3 +123,111 @@ nav .top.expanded .views img {
     padding-left: 5px;
     padding-right: 5px;
 }
+
+.desktop, .desktop img {
+    display: none;
+}
+
+.views.mobile div{
+    width: 100%;
+    text-align: center;
+    color: #5f6d6a;
+    letter-spacing: 0em;
+    font-size: xx-large;
+}
+
+/* Fish View Properties */
+
+body.fish {
+    background-image: url('./assets/fishBackground.jpg');
+}
+
+nav .topbar.fish {
+    color: #025762;
+}
+
+nav .top.collapsed.fish{
+    color: #025762;
+}
+
+nav .x.fish {
+    color: #025762;
+}
+
+.highlighted.fish{
+    background-color: #025762;
+}
+
+
+/* Desktop Properties */
+
+@media (min-width: 700px) {
+    nav .top.collapsed {
+        display: none;
+    }
+
+    
+    nav .top.expanded {
+        display: block;
+        width: 300px;
+        background-color: rgb(95, 109, 106, 0.45);
+    }
+    nav .top.expanded.fish {
+        background-color: rgb(2, 87, 98, 0.33);
+    }
+    nav .x, .whitespace {
+        display: none;
+    }
+    nav .top.collapsed .topbar {
+        display: none;
+    }
+
+
+    nav .top.expanded .name{
+        padding: 0;
+        width: 100%;
+        text-align: center;
+        color: white;
+    }
+
+    nav li {
+        color:#5f6d6a;
+    }
+
+    .highlighted {
+        background-color: white;
+    }
+    
+    nav .links.mobile, nav .views.mobile, nav .links.mobile img, nav .views.mobile img{
+        display: none;
+    }
+
+    nav .top.expanded .links.mobile{
+        height: 0;
+    }
+
+    .desktop, .desktop img {
+        display: block;
+        height: 20%;
+    }
+
+    nav .views.desktop {
+        display: block;
+    }
+
+    /* Fish View Properties */
+
+    nav .top.expanded.fish {
+        /* background-color: rgb(2, 87, 98,0.65);; */
+    }
+
+    nav li .fish {
+        color: 025762;
+    }
+    .highlighted.fish{
+        background-color: white;
+    }
+
+}
+
+
