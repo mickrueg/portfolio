@@ -13,44 +13,60 @@
     <script defer src="app.js"></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="top collapsed">
-                <div class="topbar">
-                    <span class="name">MK</span>
-                    <span class="whitespace"></span>
-                    <img class="hamburger" src="./assets/hamburgerMobileLeaf.png" alt="hamburger menu">
-                </div>
+    <nav>
+        <div class="top expanded">
+            <div class="topbar">
+                <span class="whitespace"></span>    
+                <span class="name" id="home">MIKE KRUEGER</span>
+                <span class="material-symbols-outlined x"> close </span>
             </div>
-            <div class="top expanded">
-                <div class="topbar">
-                    <span class="whitespace"></span>    
-                    <span class="name">MIKE KRUEGER</span>
-                    <span class="material-symbols-outlined x"> close </span>
-                </div>
-                <ul>
-                    <li><span class="highlighted">BIO</span></li>
-                    <li><span class="highlighted">PROJECTS</span></li>
-                    <li><span class="highlighted">RESUME</span></li>
-                </ul>
-                <div class="links mobile">
-                    <img src="./assets/linkedinMobileLeaf.png" alt="Click to go to Mike Krueger's LinkedIn account." class="linkedin">
-                    <img src="./assets/githubMobileLeaf.png" alt="Click to go to Mike Krueger's github account." class="github">
-                </div>
-                <div class="views mobile">
-                    <img src="./assets/fishMobileLeaf.png" alt="Click here to change appearance to `fish view`." class="fishView">
-                    <img src="./assets/leafMobileLeaf.png" alt="Click here to change appearance to `leaf view`." class="leafView">
-                </div>
-                <div class="links desktop">
-                    <img src="./assets/linkedinWhite.png" alt="Click to go to Mike Krueger's LinkedIn account.">
-                    <img src="./assets/githubWhite.png" alt="Click to go to Mike Krueger's github account.">
-                </div>
-                <div class="views desktop">
-                    <img src="./assets/fishWhite.png" alt="Click here to change appearance to `fish view`." class="fishView">
-                    <img src="./assets/leafWhite.png" alt="Click here to change appearance to `leaf view`." class="leafView">
-                </div>
+            <ul>
+                <li><span class="highlighted" id="bio">BIO</span></li>
+                <li><span class="highlighted" id="projects">PROJECTS</span></li>
+                <li><span class="highlighted" id="resume">RESUME</span></li>
+            </ul>
+            <div class="links">
+                <a href="https://www.linkedin.com/in/mike-krueger-6063a9121">
+                    <img src="./assets/linkedinMobileLeaf.png" alt="Click to go to Mike Krueger's LinkedIn account." id="linkedin" class="mobile">
+                </a>
+                <a href="https://www.linkedin.com/in/mike-krueger-6063a9121">
+                    <img src="./assets/linkedinWhite.png" alt="Click to go to Mike Krueger's LinkedIn account." class="desktop">
+                </a>
+                <a href="https://github.com/mickrueg">
+                    <img src="./assets/githubMobileLeaf.png" alt="Click to go to Mike Krueger's github account." id="github" class="mobile">
+                </a>
+                <a href="https://github.com/mickrueg">
+                    <img src="./assets/githubWhite.png" alt="Click to go to Mike Krueger's github account." id="github" class="desktop">
+                </a>
             </div>
-        </nav>
-    </header>
+            <div class="views">
+                <img src="./assets/fishMobileLeaf.png" alt="Click here to change appearance to `fish view`." id="fishView" class="mobile">
+                <img src="./assets/fishWhite.png" alt="Click here to change appearance to `fish view`." id="fishView" class="desktop">
+                <img src="./assets/leafMobileLeaf.png" alt="Click here to change appearance to `leaf view`." id="leafView" class="mobile">
+                <img src="./assets/leafWhite.png" alt="Click here to change appearance to `leaf view`." id="leafView" class="desktop">
+            </div>
+            <div class="bottombar">
+                <span class="name" id="home">MK</span>
+                <span class="whitespace"></span>
+                <img class="hamburger" src="./assets/hamburgerMobileLeaf.png" alt="hamburger menu">
+            </div>
+        </div>
+    </nav>
+    <main>
+        <section class="viewscreen">
+            <div class="home visible">
+                Home
+            </div>
+            <div class="bio">
+                BIO CONTENT
+            </div>
+            <div class="projects">
+                PROJECTS
+            </div>
+            <div class="resume">
+                RESUME RESUME
+            </div>
+        </section>
+    </main>
 </body>
 </html>

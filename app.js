@@ -1,77 +1,126 @@
+//QUERY SELECTORS-----------------------
+//Query Selectors for clickable elements
 const x = document.querySelector('.x')
 const hamburger = document.querySelector('.hamburger')
-const navMobileCollapsed = document.querySelector('nav .top.collapsed')
-const navMobileExpanded = document.querySelector('nav .top.expanded')
 
+//Query Selectors for html section elements
+const navMobileExpanded = document.querySelector('nav .top.expanded')
+const bottombar = document.querySelector(`.bottombar`)
 const body = document.querySelector('body')
 const topbar = document.querySelector('nav .topbar')
-const topCollapsed = document.querySelector('nav .top.collapsed')
 const highlighted = document.querySelectorAll('.highlighted')
-const topExpanded = document.querySelector('nav .top.expanded')
 const navList = document.querySelectorAll('nav li')
+const homeButton = document.querySelectorAll(`#home`)
+const homeSection = document.querySelector('.home')
+const bioButton = document.querySelector(`#bio`)
+const bioSection = document.querySelector('.bio')
+const projectsButton = document.querySelector(`#projects`)
+const projectsSection = document.querySelector('.projects')
+const resumeButton = document.querySelector(`#resume`)
+const resumeSection = document.querySelector('.resume')
 
-//Query Selectors for Images
-const fish = document.querySelectorAll('.fishView')
-const leaf = document.querySelectorAll('.leafView')
-const fishMobile = document.querySelector('.mobile .fishView')
-const leafMobile = document.querySelector('.mobile .leafView ')
-const linkedinMobile = document.querySelector('.mobile .linkedin')
-const githubMobile = document.querySelector('.mobile .github')
-
-// fishMobile.src = `./assets/fishMobileFish.png`
+//Query Selectors for elements that are images
+const fish = document.querySelectorAll('#fishView')
+const leaf = document.querySelectorAll('#leafView')
+const fishMobile = document.querySelector('#fishView.mobile')
+const leafMobile = document.querySelector('#leafView.mobile ')
+const linkedinMobile = document.querySelector('#linkedin.mobile ')
+const githubMobile = document.querySelector('#github.mobile')
 
 
 
-//Event Listeners
-hamburger.addEventListener('click',()=>{
-    navMobileCollapsed.style.display = 'none';
-    navMobileExpanded.style.display = 'block';
-})
-x.addEventListener('click',()=>{
-    navMobileCollapsed.style.display = 'block';
-    navMobileExpanded.style.display = 'none';
-})
 
+
+//FUNCTIONS-----------------------
+//Close out of mobile window
+const exitDropDown = () => {
+    navMobileExpanded.classList.remove('mobile')
+    bottombar.classList.remove(`expanded`)
+}
+//If user clicks on fish, change elements to fish theme
 fish.forEach((e)=>{
     e.addEventListener('click', ()=>{
         body.classList.add('fish')
         x.classList.add('fish')
         topbar.classList.add('fish')
-        topCollapsed.classList.add('fish')
         for (const i of highlighted){
             i.classList.add('fish')
         }
-        topExpanded.classList.add('fish')
+        navMobileExpanded.classList.add('fish')
         for (const i of navList){
             i.classList.add('fish')
         }
+        bottombar.classList.add('fish')
+        
         fishMobile.src = `./assets/fishMobileFish.png`
         leafMobile.src = `./assets/leafMobileFish.png`
         githubMobile.src = `./assets/githubMobileFish.png`
         linkedinMobile.src = `./assets/linkedinMobileFish.png`
+        hamburger.src = `./assets/hamburgerMobileFish.png`
 
+        exitDropDown();
+        
     })
 })
 
-
+//If user clicks on leaf, change elements to fish theme
 leaf.forEach((e)=>{
     e.addEventListener('click', ()=>{
         body.classList.remove('fish')
         x.classList.remove('fish')
         topbar.classList.remove('fish')
-        topCollapsed.classList.remove('fish')
         for (const i of highlighted){
             i.classList.remove('fish')
         }
-        topExpanded.classList.remove('fish')
+        navMobileExpanded.classList.remove('fish')
         for (const i of navList){
             i.classList.remove('fish')
         }
+        bottombar.classList.remove('fish')
         fishMobile.src = `./assets/fishMobileLeaf.png`
         leafMobile.src = `./assets/leafMobileLeaf.png`
         githubMobile.src = `./assets/githubMobileLeaf.png`
         linkedinMobile.src = `./assets/linkedinMobileLeaf.png`
-
+        
+        exitDropDown();
     })
 })
 
+
+//EVENT LISTENERS-----------------------
+hamburger.addEventListener('click',()=>{
+    navMobileExpanded.classList.add('mobile');
+    bottombar.classList.add(`expanded`)
+})
+
+x.addEventListener('click',()=>{
+    exitDropDown();
+})
+
+homeButton.forEach((e)=>{
+    e.addEventListener('click', ()=>{
+        const closeAllOther = [bioSection, resumeSection,projectsSection]
+        closeAllOther.forEach((e)=>e.classList.remove(`visible`))
+        homeSection.classList.add(`visible`)
+        exitDropDown();
+    })
+})
+
+bioButton.addEventListener('click', ()=>{
+    const closeAllOther = [homeSection, resumeSection,projectsSection]
+    closeAllOther.forEach((e)=>e.classList.remove(`visible`))
+    bioSection.classList.add('visible')
+    exitDropDown();
+})
+projectsButton.addEventListener('click', ()=>{
+    const closeAllOther = [homeSection, resumeSection,bioSection]
+    closeAllOther.forEach((e)=>e.classList.remove(`visible`))
+    projectsSection.classList.add('visible')
+    exitDropDown();
+})
+resumeButton.addEventListener('click', ()=>{
+    const closeAllOther = [homeSection, bioSection,projectsSection]
+    closeAllOther.forEach((e)=>e.classList.remove(`visible`))
+    resumeSection.classList.add('visible')
+    exitDropDown();
+})

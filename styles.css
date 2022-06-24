@@ -12,19 +12,37 @@ body {
     height: 100vh;
     overflow: hidden;
     margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@keyframes fadeInOpacity {
+    0% {
+        opacity: 0;;
+    }
+    100% {
+        opacity: 1;
+    }
+
+}
+
+@keyframes fadeOutOpacity {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 .border {
     border-style: solid;
 }
 
-header {
-    width: 100%;
-    height: 100%;
-}
 
 nav {
     height: 100%;
+    width: 100%;
 }
 
 nav .topbar {
@@ -41,17 +59,25 @@ nav .topbar {
     
 }
 
-nav .top.collapsed{
-    color: #5f6d6a;
-    margin-top: 0;
-    background-color: rgb(255, 255, 255,0.65);
-    /* display: none; */
-}
 
 nav .top.expanded {
     height: 100%;
     background-color: rgb(255, 255, 255,0.65);
-    display: none;
+    /* display: none; */
+    position: fixed;
+    width: 100%;
+    /* left: -100%; */
+    top: -91%;
+    transition-delay: 0.1s;
+    transition: all 600ms ease;
+    z-index: 1;
+}
+
+nav .top.expanded.mobile {
+    /* left:0; */
+    top: 0;
+    transition-delay: 0.1s;
+    transition: all 600ms ease;
 }
 
 
@@ -103,7 +129,7 @@ nav .top.expanded .links{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    height: 20%;
+    height: 10%;
 }
 
 nav .top.expanded .links img {
@@ -116,6 +142,7 @@ nav .top.expanded .views{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    height: 12.5%;
 }
 
 nav .top.expanded .views img {
@@ -134,6 +161,111 @@ nav .top.expanded .views img {
     color: #5f6d6a;
     letter-spacing: 0em;
     font-size: xx-large;
+}
+
+nav .bottombar {
+    height: 100px;
+    padding-right: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-around;
+    color: #5f6d6a;
+    opacity: 1;
+    margin-top: 0;
+    position: relative;
+    bottom: 0;
+}
+
+nav .bottombar.expanded {
+    display: none;
+}
+
+main {
+    color: white;
+    position: absolute;
+    top: 85px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transition-delay: 0.1s;
+    transition: all 600ms ease;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.viewscreen {
+    height: 80%;
+    width: 80%;
+}
+
+.viewscreen .home{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    right: -120%;
+    /* right: 0; */
+    background-color: rgb(245, 245, 245,.75);
+}
+
+.viewscreen .home.visible{
+    right: 0;
+    animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 1s;
+}
+
+.viewscreen .bio{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: -100%;
+    right: -120%;
+    background-color: rgb(245, 245, 245,.75);
+}
+
+.viewscreen .bio.visible{
+    right: 0;
+    opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 1s;
+}
+.viewscreen .projects{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: -200%;
+    right: -120%;
+    background-color: rgb(245, 245, 245,.75);
+}
+
+.viewscreen .projects.visible{
+    right: 0;
+    animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 1s;
+}
+.viewscreen .resume{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: -300%;
+    right: -120%;
+    background-color: rgb(245, 245, 245,.75);
+}
+
+.viewscreen .resume.visible{
+    right: 0;
+    animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 1s;
 }
 
 /* Fish View Properties */
@@ -157,30 +289,39 @@ nav .x.fish {
 .highlighted.fish{
     background-color: #025762;
 }
+nav .bottombar.fish {
+    color: #025762;
+}
+
+nav .bottombar.fish{
+    color: #025762;
+}
 
 
 /* Desktop Properties */
 
 @media (min-width: 700px) {
-    nav .top.collapsed {
-        display: none;
-    }
-
     
     nav .top.expanded {
         display: block;
         width: 300px;
-        background-color: rgb(95, 109, 106, 0.45);
+        background-color: rgb(95, 109, 106, 0.4);
+        top: 0;
+        transition-delay: 0.1s;
+        transition: all 600ms ease;
     }
+
+    nav .bottombar {
+        display:none;
+    }
+
     nav .top.expanded.fish {
-        background-color: rgb(2, 87, 98, 0.33);
+        background-color: rgb(2, 87, 98, 0.45);
     }
     nav .x, .whitespace {
         display: none;
     }
-    nav .top.collapsed .topbar {
-        display: none;
-    }
+
 
 
     nav .top.expanded .name{
@@ -198,8 +339,12 @@ nav .x.fish {
         background-color: white;
     }
     
-    nav .links.mobile, nav .views.mobile, nav .links.mobile img, nav .views.mobile img{
+    nav .mobile, nav img.mobile{
         display: none;
+    }
+
+    nav .desktop, nav img.desktop {
+        display: block;
     }
 
     nav .top.expanded .links.mobile{
@@ -215,14 +360,19 @@ nav .x.fish {
         display: block;
     }
 
-    /* Fish View Properties */
-
-    nav .top.expanded.fish {
-        /* background-color: rgb(2, 87, 98,0.65);; */
+    main {
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 300px;
     }
 
+
+    /* Fish View Properties */
+
+
     nav li .fish {
-        color: 025762;
+        color: #025762;
     }
     .highlighted.fish{
         background-color: white;
