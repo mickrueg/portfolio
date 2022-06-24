@@ -5,8 +5,9 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: x-large;
-    letter-spacing: .2em;
+    font-weight: 400;
+    font-size: xx-large;
+    letter-spacing: .1em;
     width: 100%;
     min-width: 375px;
     height: 100vh;
@@ -67,16 +68,17 @@ nav .top.expanded {
     position: fixed;
     width: 100%;
     /* left: -100%; */
-    top: -91%;
-    /* transition-delay: 0.1s;
-    transition: all 600ms ease; */
+    top: -88%;
+    transition-delay: 0.1s;
+    transition: all 600ms ease;
     z-index: 1;
 }
 
 nav .top.expanded.mobile {
     top: 0;
-    /* transition-delay: 0.1s;
-    transition: all 600ms ease; */
+
+    transition-delay: 0.1s;
+    transition: all 600ms ease;
 }
 
 
@@ -85,15 +87,14 @@ nav .top.expanded .name {
 }
 
 img.hamburger  {
-    height: 25px;
-    width: 25px;
+    height: 40px;
+    width: 40px;
     padding-top: 3px;
 }
 
 nav .x { 
-    padding-top: 5px;
-    height: 35px;
-    width: 35px;
+    padding-right: 20px;
+    font-size: 40px;
     font-variation-settings: 
     'FILL' 0, 
     'wght' 600, 
@@ -163,7 +164,7 @@ nav .top.expanded .views img {
 }
 
 nav .bottombar {
-    height: 100px;
+    height: 20px;
     padding-right: 10%;
     display: flex;
     flex-wrap: wrap;
@@ -195,8 +196,9 @@ main {
     bottom: 0;
     right: 0;
     left: 0;
-    /* transition-delay: 0.1s;
-    transition: all 600ms ease; */
+    width: 100%;
+    transition-delay: 0.1s;
+    transition: all 600ms ease;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -204,11 +206,12 @@ main {
 }
 
 .viewscreen {
-    height: 80%;
-    width: 80%;
+    height: 90%;
+    width: 90%;
     color: #5f6d6a;
     letter-spacing: .0em;
-    font-size: x-large;
+    font-size: large;
+    overflow: hidden;
 }
 .viewscreen a{
     /* text-decoration: none; */
@@ -223,15 +226,15 @@ main {
     height: 100%;
     right: -120%;
     /* right: 0; */
-    background-color: rgb(245, 245, 245,.75);
+    background-color: rgb(245, 245, 245,.80);
 }
 
 .viewscreen .home.visible{
     right: 0;
-    /* animation-name: fadeInOpacity;
+    animation-name: fadeInOpacity;
 	animation-iteration-count: 1;
 	animation-timing-function: ease-in;
-	animation-duration: 1s; */
+	animation-duration: 1s;
     display: flex;
     flex-wrap: wrap;
     justify-content: right;
@@ -358,13 +361,19 @@ nav .bottombar.fish{
 
 @media (min-width: 700px) {
     
+    body {
+        font-weight: 300;
+        font-size: x-large;
+        letter-spacing: .2em;
+    }
+
     nav .top.expanded {
         display: block;
         width: 300px;
         background-color: rgb(95, 109, 106, 0.4);
         top: 0;
-        /* transition-delay: 0.1s;
-        transition: all 600ms ease; */
+        transition-delay: 0.1s;
+        transition: all 600ms ease;
     }
 
     nav .bottombar {
