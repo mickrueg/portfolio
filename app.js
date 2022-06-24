@@ -10,6 +10,7 @@ const body = document.querySelector('body')
 const topbar = document.querySelector('nav .topbar')
 const highlighted = document.querySelectorAll('.highlighted')
 const navList = document.querySelectorAll('nav li')
+const views = document.querySelector(`.views`)
 const homeButton = document.querySelectorAll(`#home`)
 const homeSection = document.querySelector('.home')
 const bioButton = document.querySelector(`#bio`)
@@ -18,6 +19,8 @@ const projectsButton = document.querySelector(`#projects`)
 const projectsSection = document.querySelector('.projects')
 const resumeButton = document.querySelector(`#resume`)
 const resumeSection = document.querySelector('.resume')
+const viewscreen = document.querySelector(`.viewscreen`)
+const linkStyle = document.querySelector(`.viewscreen a`)
 
 //Query Selectors for elements that are images
 const fish = document.querySelectorAll('#fishView')
@@ -51,13 +54,15 @@ fish.forEach((e)=>{
             i.classList.add('fish')
         }
         bottombar.classList.add('fish')
-        
+        views.classList.add(`fish`)
+        viewscreen.classList.add(`fish`)
+        linkStyle.classList.add(`fish`)
         fishMobile.src = `./assets/fishMobileFish.png`
         leafMobile.src = `./assets/leafMobileFish.png`
         githubMobile.src = `./assets/githubMobileFish.png`
         linkedinMobile.src = `./assets/linkedinMobileFish.png`
         hamburger.src = `./assets/hamburgerMobileFish.png`
-
+        
         exitDropDown();
         
     })
@@ -77,11 +82,15 @@ leaf.forEach((e)=>{
             i.classList.remove('fish')
         }
         bottombar.classList.remove('fish')
+        views.classList.remove(`fish`)
+        viewscreen.classList.remove(`fish`)
+        linkStyle.classList.remove(`fish`)
         fishMobile.src = `./assets/fishMobileLeaf.png`
         leafMobile.src = `./assets/leafMobileLeaf.png`
         githubMobile.src = `./assets/githubMobileLeaf.png`
         linkedinMobile.src = `./assets/linkedinMobileLeaf.png`
-        
+        hamburger.src = `./assets/hamburgerMobileLeaf.png`
+
         exitDropDown();
     })
 })

@@ -68,16 +68,15 @@ nav .top.expanded {
     width: 100%;
     /* left: -100%; */
     top: -91%;
-    transition-delay: 0.1s;
-    transition: all 600ms ease;
+    /* transition-delay: 0.1s;
+    transition: all 600ms ease; */
     z-index: 1;
 }
 
 nav .top.expanded.mobile {
-    /* left:0; */
     top: 0;
-    transition-delay: 0.1s;
-    transition: all 600ms ease;
+    /* transition-delay: 0.1s;
+    transition: all 600ms ease; */
 }
 
 
@@ -181,6 +180,14 @@ nav .bottombar.expanded {
     display: none;
 }
 
+#fishView {
+    padding-right: 12px;
+}
+
+.views {
+    color: #5f6d6a;
+}
+
 main {
     color: white;
     position: absolute;
@@ -188,8 +195,8 @@ main {
     bottom: 0;
     right: 0;
     left: 0;
-    transition-delay: 0.1s;
-    transition: all 600ms ease;
+    /* transition-delay: 0.1s;
+    transition: all 600ms ease; */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -199,8 +206,17 @@ main {
 .viewscreen {
     height: 80%;
     width: 80%;
+    color: #5f6d6a;
+    letter-spacing: .0em;
+    font-size: x-large;
+}
+.viewscreen a{
+    /* text-decoration: none; */
+    color: #5f6d6a;
 }
 
+
+/* Home Section Content */
 .viewscreen .home{
     position: relative;
     width: 100%;
@@ -212,10 +228,36 @@ main {
 
 .viewscreen .home.visible{
     right: 0;
-    animation-name: fadeInOpacity;
+    /* animation-name: fadeInOpacity;
 	animation-iteration-count: 1;
 	animation-timing-function: ease-in;
-	animation-duration: 1s;
+	animation-duration: 1s; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+}
+
+.home .house {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 500,
+  'GRAD' 0,
+  'opsz' 48;
+}
+
+.home .text{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: -20px;
+}
+
+.home #profilepic{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    bottom: 0;
+    align-self: flex-end;
 }
 
 .viewscreen .bio{
@@ -268,6 +310,8 @@ main {
 	animation-duration: 1s;
 }
 
+
+
 /* Fish View Properties */
 
 body.fish {
@@ -297,6 +341,18 @@ nav .bottombar.fish{
     color: #025762;
 }
 
+.views.fish {
+    color: #025762;
+}
+
+.viewscreen.fish {
+    color: #025762;
+}
+.viewscreen a.fish{
+    /* text-decoration: none; */
+    color: #025762;
+}
+
 
 /* Desktop Properties */
 
@@ -307,8 +363,8 @@ nav .bottombar.fish{
         width: 300px;
         background-color: rgb(95, 109, 106, 0.4);
         top: 0;
-        transition-delay: 0.1s;
-        transition: all 600ms ease;
+        /* transition-delay: 0.1s;
+        transition: all 600ms ease; */
     }
 
     nav .bottombar {
@@ -367,6 +423,10 @@ nav .bottombar.fish{
         left: 300px;
     }
 
+    .views {
+        color: white;
+    }
+
 
     /* Fish View Properties */
 
@@ -378,6 +438,8 @@ nav .bottombar.fish{
         background-color: white;
     }
 
+    .views.fish{
+        color: white;
+    }
+
 }
-
-
