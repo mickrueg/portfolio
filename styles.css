@@ -9,7 +9,7 @@ body {
     font-size: xx-large;
     letter-spacing: .1em;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     overflow: hidden;
     margin: 0;
     display: flex;
@@ -48,6 +48,42 @@ h2{
 }
 
 
+#intro-question {
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    z-index: 3;
+    color: white;
+    background-color: rgba(46, 58, 55, 0.95);
+    font-family: 'Source Code Pro', monospace;
+    letter-spacing: 0em;
+    font-size: x-large;
+    font-weight: 200;
+    box-shadow: inset 0 0 1000px rgb(255, 255, 255,1);
+}
+
+#intro-question.hide {
+    display: none;
+}
+
+.hover {
+    cursor: pointer;
+}
+
+#intro-question .intro-views{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#intro-question .intro-views img{
+    height: 35px;
+}
+
 nav {
     height: 100%;
     width: 100%;
@@ -62,18 +98,17 @@ nav .topbar {
     color: #5f6d6a;
     opacity: 1;
     margin-top: 0;
-    borderst
 }
 
 
 nav .top.expanded {
-    height: 100%;
+    height: 650px;
     background-color: rgb(255, 255, 255,0.95);
     /* display: none; */
     position: fixed;
     width: 100%;
     /* left: -100%; */
-    top: -100%;
+    top: -650px;
     transition-delay: 0.1s;
     transition: all 600ms ease;
     z-index: 2;
@@ -83,9 +118,10 @@ nav .top.expanded {
 
 nav .top.expanded.mobile {
     top: 0;
+    height: 100%;
     margin-top:0;
-    transition-delay: 0.1s;
-    transition: all 600ms ease;
+    /* transition-delay: 0.1s;
+    transition: all 600ms ease; */
 }
 
 
@@ -154,6 +190,7 @@ nav .top.expanded .views{
     height: 8%;
 }
 
+
 nav .top.expanded .views img {
     height: 35px;
     padding-left: 5px;
@@ -173,7 +210,7 @@ nav .top.expanded .views img {
 }
 
 nav .bottombar {
-    height: 13%;
+    height: 70px;
     padding-right: 5%;
     display: flex;
     flex-wrap: wrap;
@@ -190,6 +227,7 @@ nav .bottombar.expanded {
 
 #fishView {
     padding-right: 12px;
+
 }
 
 .views {
@@ -204,8 +242,8 @@ main {
     right: 0;
     left: 0;
     width: 100%;
-    transition-delay: 0.1s;
-    transition: all 600ms ease;
+    /* transition-delay: 0.1s;
+    transition: all 600ms ease; */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -213,8 +251,8 @@ main {
 }
 
 .viewscreen {
-    height: 80vh;
-    width: 80%;
+    height: 80%;
+    width: 70%;
     padding-left: 20px;
     padding-top: 10px;
     padding-right: 20px;
@@ -379,8 +417,8 @@ nav .bottombar.fish{
         background-color: rgb(95, 109, 106, 0.4);
         top: 0;
         margin-top: 0;
-        transition-delay: 0.1s;
-        transition: all 600ms ease;
+        /* transition-delay: 0.1s;
+        transition: all 600ms ease; */
         }
 
     nav .bottombar {
@@ -437,6 +475,7 @@ nav .bottombar.fish{
         bottom: 0;
         right: 0;
         left: 300px;
+        
     }
 
     .views {
