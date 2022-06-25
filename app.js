@@ -13,11 +13,11 @@ const navList = document.querySelectorAll('nav li')
 const views = document.querySelector(`.views`)
 const homeButton = document.querySelectorAll(`#home`)
 const homeSection = document.querySelector('.home')
-const bioButton = document.querySelector(`#bio`)
+const bioButton = document.querySelectorAll(`#bio`)
 const bioSection = document.querySelector('.bio')
-const projectsButton = document.querySelector(`#projects`)
+const projectsButton = document.querySelectorAll(`#projects`)
 const projectsSection = document.querySelector('.projects')
-const resumeButton = document.querySelector(`#resume`)
+const resumeButton = document.querySelectorAll(`#resume`)
 const resumeSection = document.querySelector('.resume')
 const viewscreen = document.querySelector(`.viewscreen`)
 const linkStyle = document.querySelector(`.viewscreen a`)
@@ -30,8 +30,6 @@ const leafMobile = document.querySelector('#leafView.mobile ')
 const linkedinMobile = document.querySelector('#linkedin.mobile ')
 const githubMobile = document.querySelector('#github.mobile')
 const introQuestion = document.querySelector('#intro-question')
-
-
 
 
 
@@ -114,25 +112,35 @@ homeButton.forEach((e)=>{
         const closeAllOther = [bioSection, resumeSection,projectsSection]
         closeAllOther.forEach((e)=>e.classList.remove(`visible`))
         homeSection.classList.add(`visible`)
+        introQuestion.classList.add(`hide`)
         exitDropDown();
     })
 })
+bioButton.forEach((e)=>{
+    e.addEventListener('click', ()=>{
+        const closeAllOther = [homeSection, resumeSection,projectsSection]
+        closeAllOther.forEach((e)=>e.classList.remove(`visible`))
+        bioSection.classList.add('visible')
+        introQuestion.classList.add(`hide`)
+        exitDropDown();
+    })
+})
+projectsButton.forEach((e=>{
+    e.addEventListener('click', ()=>{
+        const closeAllOther = [homeSection, resumeSection,bioSection]
+        closeAllOther.forEach((e)=>e.classList.remove(`visible`))
+        projectsSection.classList.add('visible')
+        introQuestion.classList.add(`hide`)
+        exitDropDown();
+    })
+}))
 
-bioButton.addEventListener('click', ()=>{
-    const closeAllOther = [homeSection, resumeSection,projectsSection]
-    closeAllOther.forEach((e)=>e.classList.remove(`visible`))
-    bioSection.classList.add('visible')
-    exitDropDown();
-})
-projectsButton.addEventListener('click', ()=>{
-    const closeAllOther = [homeSection, resumeSection,bioSection]
-    closeAllOther.forEach((e)=>e.classList.remove(`visible`))
-    projectsSection.classList.add('visible')
-    exitDropDown();
-})
-resumeButton.addEventListener('click', ()=>{
-    const closeAllOther = [homeSection, bioSection,projectsSection]
-    closeAllOther.forEach((e)=>e.classList.remove(`visible`))
-    resumeSection.classList.add('visible')
-    exitDropDown();
+resumeButton.forEach((e)=>{
+    e.addEventListener('click', ()=>{
+        const closeAllOther = [homeSection, bioSection,projectsSection]
+        closeAllOther.forEach((e)=>e.classList.remove(`visible`))
+        resumeSection.classList.add('visible')
+        introQuestion.classList.add(`hide`)
+        exitDropDown();
+    })
 })

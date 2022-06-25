@@ -61,10 +61,30 @@ h2{
     background-color: rgba(162, 171, 169);
     font-family: 'Source Code Pro', monospace;
     letter-spacing: 0em;
-    font-size: x-large;
+    font-size: large;
     font-weight: 300;
+    line-height: 1em;
     /* box-shadow: inset 0 0 1000px rgb(255, 255, 255,1); */
 }
+#intro-question b{
+    font-weight: 500;
+}
+
+#intro-question a{
+    text-decoration: none;
+    color: white;
+}
+
+#intro-question .intro-text{
+    height: 75%;
+}
+
+#intro-question .selected {
+    border-left: 2px solid white;
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+
 
 #intro-question.hide {
     display: none;
@@ -74,18 +94,35 @@ h2{
     cursor: pointer;
 }
 
+
+
 #intro-question .intro-views{
-    width: 100%;
+    width: 50%;
+    height: 45px;
     display: flex;
     justify-content: center;
+    border-style: solid;
+    margin-left: 60px;
+
 }
 
 #intro-question .intro-views img{
     height: 35px;
 }
 
+#intro-question .move {
+    padding-top: 12px;
+}
+
+#intro-question #fishView {
+    padding-bottom: 5px;
+    margin-top: 5px;
+}
+
 #intro-question #leafView {
     padding-left: 5px;
+    padding-bottom: 5px;
+    margin-top: 5px;
 }
 
 nav {
@@ -191,7 +228,7 @@ nav .top.expanded .views{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    height: 8%;
+    /* height: 8%; */
 }
 
 
@@ -214,7 +251,7 @@ nav .top.expanded .views img {
 }
 
 nav .bottombar {
-    height: 70px;
+    height: 100px;
     padding-right: 5%;
     display: flex;
     flex-wrap: wrap;
