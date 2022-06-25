@@ -9,7 +9,6 @@ body {
     font-size: xx-large;
     letter-spacing: .1em;
     width: 100%;
-    min-width: 375px;
     height: 100vh;
     overflow: hidden;
     margin: 0;
@@ -48,8 +47,6 @@ nav {
 
 nav .topbar {
     height: 70px;
-    padding-left: 5%;
-    padding-right: 5%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -57,7 +54,6 @@ nav .topbar {
     color: #5f6d6a;
     opacity: 1;
     margin-top: 0;
-    
 }
 
 
@@ -68,28 +64,29 @@ nav .top.expanded {
     position: fixed;
     width: 100%;
     /* left: -100%; */
-    top: -88%;
+    top: -100%;
     transition-delay: 0.1s;
     transition: all 600ms ease;
     z-index: 1;
+    margin-top: 75px;
+    
 }
 
 nav .top.expanded.mobile {
     top: 0;
-
+    margin-top:0;
     transition-delay: 0.1s;
     transition: all 600ms ease;
 }
 
 
 nav .top.expanded .name {
-    padding-left: 40px;
+    padding-left: 20px;
 }
 
 img.hamburger  {
     height: 40px;
     width: 40px;
-    padding-top: 3px;
 }
 
 nav .x { 
@@ -165,7 +162,7 @@ nav .top.expanded .views img {
 
 nav .bottombar {
     height: 20px;
-    padding-right: 10%;
+    padding-right: 5%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -212,6 +209,7 @@ main {
     letter-spacing: .0em;
     font-size: large;
     overflow: hidden;
+    border-radius: 3px;;
 }
 .viewscreen a{
     /* text-decoration: none; */
@@ -226,7 +224,7 @@ main {
     height: 100%;
     right: -120%;
     /* right: 0; */
-    background-color: rgb(245, 245, 245,.80);
+    background-color: rgb(236, 236, 236, .9);
 }
 
 .viewscreen .home.visible{
@@ -238,6 +236,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: right;
+    overflow-y: auto;
 }
 
 .home .house {
@@ -256,9 +255,9 @@ main {
 }
 
 .home #profilepic{
-    position: absolute;
-    width: 300px;
-    height: 300px;
+    position: fixed;
+    width: 200px;
+    height: 200px;
     bottom: 0;
     align-self: flex-end;
 }
@@ -367,11 +366,16 @@ nav .bottombar.fish{
         letter-spacing: .2em;
     }
 
+    nav {
+        width: 300px;
+
+    }
     nav .top.expanded {
         display: block;
         width: 300px;
         background-color: rgb(95, 109, 106, 0.4);
         top: 0;
+        margin-top: 0;
         transition-delay: 0.1s;
         transition: all 600ms ease;
     }
@@ -434,6 +438,16 @@ nav .bottombar.fish{
 
     .views {
         color: white;
+    }
+
+    main {
+        width:auto;
+        font-weight: 400;
+    }
+
+    .home #profilepic {
+        width: 300px;
+        height: 300px;
     }
 
 
