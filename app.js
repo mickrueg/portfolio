@@ -30,6 +30,7 @@ const leafMobile = document.querySelector('#leafView.mobile ')
 const linkedinMobile = document.querySelector('#linkedin.mobile ')
 const githubMobile = document.querySelector('#github.mobile')
 const introQuestion = document.querySelector('#intro-question')
+const email = document.querySelector('#email')
 
 
 
@@ -56,6 +57,7 @@ fish.forEach((e)=>{
         views.classList.add(`fish`)
         viewscreen.classList.add(`fish`)
         linkStyle.classList.add(`fish`)
+        email.classList.add(`fish`)
         introQuestion.classList.add(`hide`)
         fishMobile.src = `./assets/fishMobileFish.png`
         leafMobile.src = `./assets/leafMobileFish.png`
@@ -85,6 +87,7 @@ leaf.forEach((e)=>{
         views.classList.remove(`fish`)
         viewscreen.classList.remove(`fish`)
         linkStyle.classList.remove(`fish`)
+        email.classList.add(`leaf`)
         introQuestion.classList.add(`hide`)
         fishMobile.src = `./assets/fishMobileLeaf.png`
         leafMobile.src = `./assets/leafMobileLeaf.png`
