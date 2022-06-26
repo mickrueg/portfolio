@@ -87,7 +87,7 @@ leaf.forEach((e)=>{
         views.classList.remove(`fish`)
         viewscreen.classList.remove(`fish`)
         linkStyle.classList.remove(`fish`)
-        email.classList.add(`leaf`)
+        email.classList.remove(`fish`)
         introQuestion.classList.add(`hide`)
         fishMobile.src = `./assets/fishMobileLeaf.png`
         leafMobile.src = `./assets/leafMobileLeaf.png`
