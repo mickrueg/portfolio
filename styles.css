@@ -124,6 +124,10 @@ h2{
     margin-right: -9px;
 }
 
+#sitemap {
+    letter-spacing: 0em;
+}
+
 .highlighted.hover:hover {
     margin-left: 5px;
     font-weight: 400;
