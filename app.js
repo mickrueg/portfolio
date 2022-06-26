@@ -31,6 +31,8 @@ const linkedinMobile = document.querySelector('#linkedin.mobile ')
 const githubMobile = document.querySelector('#github.mobile')
 const introQuestion = document.querySelector('#intro-question')
 const email = document.querySelector('#email')
+const profilepic = document.querySelector('#profilepic')
+const sitemap = document.querySelector('#sitemap')
 
 
 
@@ -146,4 +148,15 @@ resumeButton.forEach((e)=>{
         introQuestion.classList.add(`hide`)
         exitDropDown();
     })
+})
+
+
+profilepic.addEventListener('click', ()=>{
+    introQuestion.classList.toggle('hide')
+    exitDropDown();
+})
+
+sitemap.addEventListener('click', ()=>{
+    introQuestion.classList.toggle('hide')
+    exitDropDown();
 })

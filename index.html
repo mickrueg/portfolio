@@ -17,23 +17,26 @@
     <script defer src="app.js"></script>
 </head>
 <body>
-    <div id="intro-question" class="">
-        <div class="intro-text">
+    <div id="intro-question" class="hide">
+        <div id="backlayer">
+            <div class="intro-text">
+                <b>site map</b>
                 <p id="home" class="section-hover hover">mike krueger</p>
-                <p class="section-hover-lock">
-                    01 <span>welcome. please<br>&nbsp &nbspselect a theme:</span>
-                    <br>&nbsp &nbsp<a id="fishView" class="view-hover">BEACH</a><b>/ </b><a id="leafView" class="view-hover">MOUNTAIN</a>
-                </p>
-                <p class="section-hover">
-                    02 <a id="bio" class="hover">bio</a><br>
-                    &nbsp &nbsp<a id="projects"class="hover">projects</a><br> 
-                    &nbsp &nbsp<a id="resume"class="hover">resume</a>
-                </p>
-                <p class="section-hover">
-                    03 <a href = "mailto: mickrueg@gmail.com" class="hover">email</a><br>
-                    &nbsp &nbsp<a href="https://www.linkedin.com/in/mike-krueger-6063a9121" target="_blank" class="hover">linkedin</a><br>
-                    &nbsp &nbsp<a href="https://github.com/mickrueg" target="_blank" class="hover">github</a><br>
-                </p>
+                    <p class="section-hover-lock">
+                        01 <span>select a theme:</span>
+                        <br>&nbsp &nbsp<a id="fishView" class="view-hover">BEACH</a><b>/ </b><a id="leafView" class="view-hover">MOUNTAIN</a>
+                    </p>
+                    <p class="section-hover">
+                        02 <a id="bio" class="hover">bio</a><br>
+                        &nbsp &nbsp<a id="projects"class="hover">projects</a><br> 
+                        &nbsp &nbsp<a id="resume"class="hover">resume</a>
+                    </p>
+                    <p class="section-hover">
+                        03 <a href = "mailto: mickrueg@gmail.com" class="hover">email</a><br>
+                        &nbsp &nbsp<a href="https://www.linkedin.com/in/mike-krueger-6063a9121" target="_blank" class="hover">linkedin</a><br>
+                        &nbsp &nbsp<a href="https://github.com/mickrueg" target="_blank" class="hover">github</a><br>
+                    </p>
+            </div>
         </div>
     </div>
     <nav>
@@ -66,12 +69,14 @@
             </div>
             <div class="links-whitespace"></div>
             <div class="whitespace-links"></div>
-            <div class="views">
-                <img src="./assets/fishMobileLeaf.png" alt="Click here to change appearance to `fish view`." id="fishView" class="mobile hover">
+            <!-- <div class="views">site map</div> -->
+            <div class="views" id="sitemap">
+                <!-- <img src="./assets/fishMobileLeaf.png" alt="Click here to change appearance to `fish view`." id="fishView" class="mobile hover">
                 <img src="./assets/fishWhite.png" alt="Click here to change appearance to `fish view`." id="fishView" class="desktop hover">
                  /
                 <img src="./assets/leafMobileLeaf.png" alt="Click here to change appearance to `leaf view`." id="leafView" class="mobile hover">
-                <img src="./assets/leafWhite.png" alt="Click here to change appearance to `leaf view`." id="leafView" class="desktop hover">
+                <img src="./assets/leafWhite.png" alt="Click here to change appearance to `leaf view`." id="leafView" class="desktop hover"> -->
+                <div class="views hover"id="sitemap">site map</div>
             </div>
             <div class="bottombar">
                 <span class="name hover" id="home">MK</span>
