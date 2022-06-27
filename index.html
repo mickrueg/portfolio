@@ -17,11 +17,13 @@
     <script defer src="app.js"></script>
 </head>
 <body>
-    <div id="intro-question" class="hide">
+    <div id="sitemap" class="hide">
         <div id="backlayer">
             <div class="intro-text">
-                <b>site map</b>
-                <p id="home" class="section-hover hover">mike krueger</p>
+                <div class="intro-text-first-line">
+                    <b>site map</b><span class="material-symbols-outlined x hover" id="sitemap-hide">close</span>
+                </div>
+                    <p id="home">mike krueger</p>
                     <p class="section-hover-lock">
                         01 <span>select a theme:</span>
                         <br>&nbsp &nbsp<a id="fishView" class="view-hover">BEACH</a><b>/ </b><a id="leafView" class="view-hover">MOUNTAIN</a>
@@ -38,6 +40,9 @@
                     </p>
             </div>
         </div>
+    </div>
+    <div id="change-theme-window" class="hide">
+        Hey! Did you try changing the theme? Click "site map" to try changing the settings :)
     </div>
     <nav>
         <div class="top expanded">
@@ -69,14 +74,8 @@
             </div>
             <div class="links-whitespace"></div>
             <div class="whitespace-links"></div>
-            <!-- <div class="views">site map</div> -->
-            <div class="views" id="sitemap">
-                <!-- <img src="./assets/fishMobileLeaf.png" alt="Click here to change appearance to `fish view`." id="fishView" class="mobile hover">
-                <img src="./assets/fishWhite.png" alt="Click here to change appearance to `fish view`." id="fishView" class="desktop hover">
-                 /
-                <img src="./assets/leafMobileLeaf.png" alt="Click here to change appearance to `leaf view`." id="leafView" class="mobile hover">
-                <img src="./assets/leafWhite.png" alt="Click here to change appearance to `leaf view`." id="leafView" class="desktop hover"> -->
-                <div class="views hover"id="sitemap">site map</div>
+            <div class="views">
+                <div class="views hover sitemap-text" id="sitemap-hide">site map</div>
             </div>
             <div class="bottombar">
                 <span class="name hover" id="home">MK</span>
@@ -90,9 +89,11 @@
             <div class="home visible">
                 <div class="text">
                     <h2>WELCOME</h2><br>
-                    I am a <b>self-starter, strong communicator,</b> and an <b>average rock climber.</b><br><br>I am a <b>software engineer</b> with a knack for building clean websites and easy-to-use tools. I build in HTML, CSS, JavaScript, Google Apps Script, and more. Check out my bio to learn more about what I am currently building. Please contact me at the email below.<br><br>
+                    Hey there! My name is <b>Mike</b> and I am a <b>software engineer</b> with a knack for building clean web applications. My peers would describe my as a <b>self-starter, strong communicator,</b> and <b>average rock climber.</b><br><br>I build in <b>HTML, CSS, JavaScript, Google Apps Script</b>, and more. Check out my <b><u>bio</u></b> to learn more about what I am currently building with my team at <b>Move Mortgage</b> and see my <b><u>projects</u></b> for a sample of previous works. <br><br>If you need to reach me, you can find me here! <br><br>
                     &nbsp; &nbsp; &nbsp; &nbsp;<span class="material-symbols-outlined">home_pin</span>&nbsp&nbspDenver, CO <br>
-                    &nbsp; &nbsp; &nbsp; &nbsp;<span class="material-symbols-outlined">mail</span>&nbsp&nbsp<a href = "mailto: mickrueg@gmail.com">mickrueg@gmail.com</a> <br><br> <br><br> <br><br> <br><br>
+                    &nbsp; &nbsp; &nbsp; &nbsp;<span class="material-symbols-outlined">mail</span>&nbsp&nbsp<a href = "mailto: mickrueg@gmail.com">mickrueg@gmail.com</a><br>
+                    &nbsp; &nbsp; &nbsp; &nbsp;<span class="material-symbols-outlined">group_add</span>&nbsp&nbsp<a href = "https://www.linkedin.com/in/mike-krueger-6063a9121">LinkedIn</a><br>
+                    &nbsp; &nbsp; &nbsp; &nbsp;<span class="material-symbols-outlined">devices</span>&nbsp&nbsp<a href = "https://github.com/mickrueg/">GitHub</a> <br><br> <br><br> <br><br>
                 </div>
                 <img src="./assets/head2.png" alt="profile picture with transparent background" id="profilepic">
             </div>

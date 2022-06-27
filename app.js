@@ -1,6 +1,6 @@
 //QUERY SELECTORS-----------------------
 //Query Selectors for clickable elements
-const x = document.querySelector('.x')
+const x = document.querySelector('nav .x')
 const hamburger = document.querySelector('.hamburger')
 
 //Query Selectors for html section elements
@@ -21,6 +21,7 @@ const resumeButton = document.querySelectorAll(`#resume`)
 const resumeSection = document.querySelector('.resume')
 const viewscreen = document.querySelector(`.viewscreen`)
 const linkStyle = document.querySelector(`.viewscreen a`)
+const changeThemeWindow = document.querySelector(`#change-theme-window`)
 
 //Query Selectors for elements that are images
 const fish = document.querySelectorAll('#fishView')
@@ -29,12 +30,10 @@ const fishMobile = document.querySelector('#fishView.mobile')
 const leafMobile = document.querySelector('#leafView.mobile ')
 const linkedinMobile = document.querySelector('#linkedin.mobile ')
 const githubMobile = document.querySelector('#github.mobile')
-const introQuestion = document.querySelector('#intro-question')
+const sitemapHide = document.querySelectorAll('#sitemap-hide')
 const email = document.querySelector('#email')
 const profilepic = document.querySelector('#profilepic')
-const sitemap = document.querySelector('#sitemap')
-
-
+const sitemapText = document.querySelector('.sitemap-text')
 
 //FUNCTIONS-----------------------
 //Close out of mobile window
@@ -60,7 +59,7 @@ fish.forEach((e)=>{
         viewscreen.classList.add(`fish`)
         linkStyle.classList.add(`fish`)
         email.classList.add(`fish`)
-        introQuestion.classList.add(`hide`)
+        sitemap.classList.add(`hide`)
         fishMobile.src = `./assets/fishMobileFish.png`
         leafMobile.src = `./assets/leafMobileFish.png`
         githubMobile.src = `./assets/githubMobileFish.png`
@@ -90,7 +89,7 @@ leaf.forEach((e)=>{
         viewscreen.classList.remove(`fish`)
         linkStyle.classList.remove(`fish`)
         email.classList.remove(`fish`)
-        introQuestion.classList.add(`hide`)
+        sitemap.classList.add(`hide`)
         fishMobile.src = `./assets/fishMobileLeaf.png`
         leafMobile.src = `./assets/leafMobileLeaf.png`
         githubMobile.src = `./assets/githubMobileLeaf.png`
@@ -117,8 +116,10 @@ homeButton.forEach((e)=>{
         const closeAllOther = [bioSection, resumeSection,projectsSection]
         closeAllOther.forEach((e)=>e.classList.remove(`visible`))
         homeSection.classList.add(`visible`)
-        introQuestion.classList.add(`hide`)
+        sitemap.classList.add(`hide`)
         exitDropDown();
+        changeThemeWindow.classList.add('hide')
+
     })
 })
 bioButton.forEach((e)=>{
@@ -126,8 +127,10 @@ bioButton.forEach((e)=>{
         const closeAllOther = [homeSection, resumeSection,projectsSection]
         closeAllOther.forEach((e)=>e.classList.remove(`visible`))
         bioSection.classList.add('visible')
-        introQuestion.classList.add(`hide`)
+        sitemap.classList.add(`hide`)
         exitDropDown();
+        changeThemeWindow.classList.add('hide')
+
     })
 })
 projectsButton.forEach((e=>{
@@ -135,8 +138,10 @@ projectsButton.forEach((e=>{
         const closeAllOther = [homeSection, resumeSection,bioSection]
         closeAllOther.forEach((e)=>e.classList.remove(`visible`))
         projectsSection.classList.add('visible')
-        introQuestion.classList.add(`hide`)
+        sitemap.classList.add(`hide`)
         exitDropDown();
+        changeThemeWindow.classList.add('hide')
+
     })
 }))
 
@@ -145,18 +150,21 @@ resumeButton.forEach((e)=>{
         const closeAllOther = [homeSection, bioSection,projectsSection]
         closeAllOther.forEach((e)=>e.classList.remove(`visible`))
         resumeSection.classList.add('visible')
-        introQuestion.classList.add(`hide`)
+        sitemap.classList.add(`hide`)
         exitDropDown();
+        changeThemeWindow.classList.add('hide')
+
     })
 })
 
 
 profilepic.addEventListener('click', ()=>{
-    introQuestion.classList.toggle('hide')
-    exitDropDown();
+    changeThemeWindow.classList.toggle('hide')
 })
 
-sitemap.addEventListener('click', ()=>{
-    introQuestion.classList.toggle('hide')
-    exitDropDown();
+sitemapHide.forEach((e)=>{
+    e.addEventListener('click', ()=>{
+        sitemap.classList.toggle('hide')
+        changeThemeWindow.classList.add('hide')
+    })
 })
