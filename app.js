@@ -1,6 +1,6 @@
 //QUERY SELECTORS-----------------------
 //Query Selectors for clickable elements
-const x = document.querySelector('.x')
+const x = document.querySelector('nav .x')
 const hamburger = document.querySelector('.hamburger')
 
 //Query Selectors for html section elements
@@ -13,26 +13,28 @@ const navList = document.querySelectorAll('nav li')
 const views = document.querySelector(`.views`)
 const homeButton = document.querySelectorAll(`#home`)
 const homeSection = document.querySelector('.home')
-const bioButton = document.querySelector(`#bio`)
+const bioButton = document.querySelectorAll(`#bio`)
 const bioSection = document.querySelector('.bio')
-const projectsButton = document.querySelector(`#projects`)
+const projectsButton = document.querySelectorAll(`#projects`)
 const projectsSection = document.querySelector('.projects')
-const resumeButton = document.querySelector(`#resume`)
+const resumeButton = document.querySelectorAll(`#resume`)
 const resumeSection = document.querySelector('.resume')
 const viewscreen = document.querySelector(`.viewscreen`)
 const linkStyle = document.querySelector(`.viewscreen a`)
+const changeThemeWindow = document.querySelector(`#change-theme-window`)
 
 //Query Selectors for elements that are images
 const fish = document.querySelectorAll('#fishView')
 const leaf = document.querySelectorAll('#leafView')
-const fishMobile = document.querySelector('#fishView.mobile')
-const leafMobile = document.querySelector('#leafView.mobile ')
+const fishMobile = document.querySelector('.links .mobile')
+const leafMobile = document.querySelector('.links .mobile ')
 const linkedinMobile = document.querySelector('#linkedin.mobile ')
 const githubMobile = document.querySelector('#github.mobile')
-
-
-
-
+const sitemapShow = document.querySelectorAll('#sitemap-show')
+const email = document.querySelector('#email')
+const profilepic = document.querySelector('#profilepic')
+const sitemapText = document.querySelector('.sitemap-text')
+const resumeLinkedin = document.querySelector(`.resume-linkedin`)
 
 //FUNCTIONS-----------------------
 //Close out of mobile window
@@ -57,11 +59,15 @@ fish.forEach((e)=>{
         views.classList.add(`fish`)
         viewscreen.classList.add(`fish`)
         linkStyle.classList.add(`fish`)
+        email.classList.add(`fish`)
+        sitemapText.classList.add(`fish`)
+        sitemap.classList.add(`hide`)
         fishMobile.src = `./assets/fishMobileFish.png`
         leafMobile.src = `./assets/leafMobileFish.png`
         githubMobile.src = `./assets/githubMobileFish.png`
         linkedinMobile.src = `./assets/linkedinMobileFish.png`
         hamburger.src = `./assets/hamburgerMobileFish.png`
+        resumeLinkedin.src = `./assets/linkedinMobileFish.png`
         
         exitDropDown();
         
@@ -85,11 +91,15 @@ leaf.forEach((e)=>{
         views.classList.remove(`fish`)
         viewscreen.classList.remove(`fish`)
         linkStyle.classList.remove(`fish`)
+        email.classList.remove(`fish`)
+        sitemapText.classList.remove(`fish`)
+        sitemap.classList.add(`hide`)
         fishMobile.src = `./assets/fishMobileLeaf.png`
         leafMobile.src = `./assets/leafMobileLeaf.png`
         githubMobile.src = `./assets/githubMobileLeaf.png`
         linkedinMobile.src = `./assets/linkedinMobileLeaf.png`
         hamburger.src = `./assets/hamburgerMobileLeaf.png`
+        resumeLinkedin.src = `./assets/linkedinMobileLeaf.png`
 
         exitDropDown();
     })
@@ -111,25 +121,55 @@ homeButton.forEach((e)=>{
         const closeAllOther = [bioSection, resumeSection,projectsSection]
         closeAllOther.forEach((e)=>e.classList.remove(`visible`))
         homeSection.classList.add(`visible`)
+        sitemap.classList.add(`hide`)
         exitDropDown();
+        changeThemeWindow.classList.add('hide')
+
+    })
+})
+bioButton.forEach((e)=>{
+    e.addEventListener('click', ()=>{
+        const closeAllOther = [homeSection, resumeSection,projectsSection]
+        closeAllOther.forEach((e)=>e.classList.remove(`visible`))
+        bioSection.classList.add('visible')
+        sitemap.classList.add(`hide`)
+        exitDropDown();
+        changeThemeWindow.classList.add('hide')
+
+    })
+})
+projectsButton.forEach((e=>{
+    e.addEventListener('click', ()=>{
+        const closeAllOther = [homeSection, resumeSection,bioSection]
+        closeAllOther.forEach((e)=>e.classList.remove(`visible`))
+        projectsSection.classList.add('visible')
+        sitemap.classList.add(`hide`)
+        exitDropDown();
+        changeThemeWindow.classList.add('hide')
+
+    })
+}))
+
+resumeButton.forEach((e)=>{
+    e.addEventListener('click', ()=>{
+        const closeAllOther = [homeSection, bioSection,projectsSection]
+        closeAllOther.forEach((e)=>e.classList.remove(`visible`))
+        resumeSection.classList.add('visible')
+        sitemap.classList.add(`hide`)
+        exitDropDown();
+        changeThemeWindow.classList.add('hide')
+
     })
 })
 
-bioButton.addEventListener('click', ()=>{
-    const closeAllOther = [homeSection, resumeSection,projectsSection]
-    closeAllOther.forEach((e)=>e.classList.remove(`visible`))
-    bioSection.classList.add('visible')
-    exitDropDown();
+
+profilepic.addEventListener('click', ()=>{
+    changeThemeWindow.classList.toggle('hide')
 })
-projectsButton.addEventListener('click', ()=>{
-    const closeAllOther = [homeSection, resumeSection,bioSection]
-    closeAllOther.forEach((e)=>e.classList.remove(`visible`))
-    projectsSection.classList.add('visible')
-    exitDropDown();
-})
-resumeButton.addEventListener('click', ()=>{
-    const closeAllOther = [homeSection, bioSection,projectsSection]
-    closeAllOther.forEach((e)=>e.classList.remove(`visible`))
-    resumeSection.classList.add('visible')
-    exitDropDown();
+
+sitemapShow.forEach((e)=>{
+    e.addEventListener('click', ()=>{
+        sitemap.classList.remove('hide')
+        changeThemeWindow.classList.add('hide')
+    })
 })

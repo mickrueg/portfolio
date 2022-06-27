@@ -9,7 +9,7 @@ body {
     font-size: xx-large;
     letter-spacing: .1em;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     overflow: hidden;
     margin: 0;
     display: flex;
@@ -48,6 +48,153 @@ h2{
 }
 
 
+#sitemap {
+    height: 100%;
+    width: 100%;
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0.1s;
+    transition: all 1000ms ease;
+    z-index: 3;
+}
+
+#backlayer{
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    z-index: 3;
+    color: white;
+    background-color: rgba(162, 171, 169);
+    font-family: 'Source Code Pro', monospace;
+    letter-spacing: 0em;
+    font-size: x-large;
+    font-weight: 300;
+    line-height: 1.4em;
+    /* box-shadow: inset 0 0 1000px rgb(255, 255, 255,1); */
+}
+
+
+#sitemap b{
+    font-weight: 500;
+}
+
+#sitemap a{
+    text-decoration: none;
+    color: white;
+}
+
+#sitemap .intro-text{
+    height: 85%;
+}
+
+
+
+#sitemap.hide {
+    visibility: hidden;
+    opacity: 0;
+    transition-delay: 0.1s;
+    transition: all 1000ms ease;
+}
+
+.hover{
+    cursor: pointer;
+}
+
+#home:hover {
+    border-left: 3px solid white;
+}
+
+
+#sitemap .hover:hover{
+    font-weight: 500;
+}
+
+#sitemap .view-hover:hover{
+    border-left: none;
+    padding-left: 0;
+    font-weight: 500;
+    margin-top: -5px;
+    text-decoration:  underline;
+    cursor: pointer;
+}
+
+#sitemap .section-hover:hover{
+    border-left: 2px solid white;
+    padding-left: 5px;
+}
+
+#sitemap .section-hover-lock:hover{
+    border-left: 2px solid white;
+    padding-left: 7px;
+    margin-right: -9px;
+}
+
+.x.hover {
+    font-weight: 300;
+}
+
+.sitemap-text {
+    letter-spacing: 0em;
+}
+
+.intro-text-first-line {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.intro-text-first-line:hover {
+    padding-left: 7px;
+}
+
+.intro-text-first-line .x {
+    align-self: flex-end;
+    font-size: 35px;
+}
+
+.highlighted.hover:hover {
+    margin-left: 5px;
+    font-weight: 400;
+}
+
+
+.links .hover:hover{
+    margin-top: -5px;
+}
+
+.views .hover:hover{
+    margin-top: -5px;
+}
+
+
+#sitemap .intro-views{
+    width: 0%;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    border-style: solid;
+    margin-left: 60px;
+
+}
+
+#sitemap .intro-views img{
+    height: 35px;
+}
+
+#sitemap .move {
+    padding-top: 12px;
+}
+
+#sitemap #fishView {
+    padding-bottom: 5px;
+    margin-top: 5px;
+}
+
 nav {
     height: 100%;
     width: 100%;
@@ -62,18 +209,17 @@ nav .topbar {
     color: #5f6d6a;
     opacity: 1;
     margin-top: 0;
-    borderst
 }
 
 
 nav .top.expanded {
-    height: 100%;
+    height: 650px;
     background-color: rgb(255, 255, 255,0.95);
     /* display: none; */
     position: fixed;
     width: 100%;
     /* left: -100%; */
-    top: -100%;
+    top: -650px;
     transition-delay: 0.1s;
     transition: all 600ms ease;
     z-index: 2;
@@ -83,9 +229,10 @@ nav .top.expanded {
 
 nav .top.expanded.mobile {
     top: 0;
+    height: 100%;
     margin-top:0;
-    transition-delay: 0.1s;
-    transition: all 600ms ease;
+    /* transition-delay: 0.1s;
+    transition: all 600ms ease; */
 }
 
 
@@ -132,7 +279,11 @@ nav li {
 }
 
 nav .links {
-    height: 20%;
+    height: 5%;
+}
+
+nav .links-whitespace{
+    height: 15%;
 }
 
 nav .top.expanded .links{
@@ -147,12 +298,21 @@ nav .top.expanded .links img {
     padding-right: 15px;
 }
 
+nav .links #email {
+    color: #5f6d6a;
+    font-size: 50px;
+    font-variation-settings:'FILL' 1;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
 nav .top.expanded .views{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    height: 8%;
+    /* height: 8%; */
 }
+
 
 nav .top.expanded .views img {
     height: 35px;
@@ -173,7 +333,7 @@ nav .top.expanded .views img {
 }
 
 nav .bottombar {
-    height: 13%;
+    height: 100px;
     padding-right: 5%;
     display: flex;
     flex-wrap: wrap;
@@ -191,9 +351,15 @@ nav .bottombar.expanded {
 #fishView {
     padding-right: 12px;
 }
+#leafView{
+    padding-right: 15px;
+}
 
 .views {
     color: #5f6d6a;
+    /* font-family: 'Source Code Pro', monospace;
+    letter-spacing: 0em;
+    line-height: 2em; */
 }
 
 main {
@@ -204,8 +370,8 @@ main {
     right: 0;
     left: 0;
     width: 100%;
-    transition-delay: 0.1s;
-    transition: all 600ms ease;
+    /* transition-delay: 0.1s;
+    transition: all 600ms ease; */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -213,8 +379,8 @@ main {
 }
 
 .viewscreen {
-    height: 80vh;
-    width: 80%;
+    height: 80%;
+    width: 70%;
     padding-left: 20px;
     padding-top: 10px;
     padding-right: 20px;
@@ -231,7 +397,7 @@ main {
 }
 .viewscreen a{
     /* text-decoration: none; */
-    color: #5f6d6a;
+    color: inherit;
 }
 
 
@@ -251,6 +417,7 @@ main {
     display: flex;
 }
 
+
 .home .material-symbols-outlined {
     font-variation-settings:
     'FILL' 0,
@@ -269,9 +436,17 @@ main {
     height: 200px;
     z-index: 1;
     right: 0;
+    margin-right: -5px;
     bottom: 0;
+    margin-bottom: -5px;
     align-self: flex-end;
+    float: right;
     /* display: none; */
+}
+
+.home #profilepic:hover  {
+    bottom: 5px;
+    right: 2px;
 }
 
 .viewscreen .bio{
@@ -314,6 +489,76 @@ main {
     display: block;
 }
 
+/* Resume Page */
+.resume-title {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+
+}
+
+h3{
+    margin-bottom: 0;
+}
+
+.resume-content {
+    margin-top: 0;
+    margin-left: 10px;
+}
+
+.resume-linkedin {
+    height: 35px;
+}
+
+.grey-text {
+    font-weight: 400;
+    font-family: 'Source Code Pro', monospace;
+    color: rgb(152, 152, 152);
+    font-size: medium;
+    letter-spacing: -.05em;
+    /* border-style: solid; */
+    /* padding: -5px; */
+}
+
+/* BIO Page */
+.videoWrapper{
+    width: 100%;
+    display: flex;
+}
+
+.bbVideoIframe{
+    width: 250px;
+    height: 140px; 
+    box-shadow: 0px 0px 5px black;
+    margin: 0 auto; 
+}
+
+/* Change theme window properties */
+#change-theme-window {
+    text-align: center;
+    letter-spacing: 0em;
+    position: absolute;
+    width: 55%;
+    height: auto;
+    z-index: 1;
+    border-radius: 5px;
+    padding: 5px;
+    right: 0;
+    margin-right: 125px;
+    bottom: 0;
+    margin-bottom: 110px;
+    color: white;
+    background-color: rgba(162, 171, 169);
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 400;
+    font-size: large;
+    box-shadow: 2px 2px 10px grey;
+
+}
+#change-theme-window.hide{
+    visibility: hidden;
+}
 
 
 /* Fish View Properties */
@@ -357,6 +602,14 @@ nav .bottombar.fish{
     color: #025762;
 }
 
+nav .links #email.fish {
+    color: #025762;
+}
+
+.sitemap-text.fish {
+    color: #025762;
+}
+
 
 /* Desktop Properties */
 
@@ -366,6 +619,10 @@ nav .bottombar.fish{
         font-weight: 300;
         font-size: x-large;
         letter-spacing: .2em;
+    }
+
+    #sitemap {
+        font-size: large;
     }
 
     nav {
@@ -379,8 +636,8 @@ nav .bottombar.fish{
         background-color: rgb(95, 109, 106, 0.4);
         top: 0;
         margin-top: 0;
-        transition-delay: 0.1s;
-        transition: all 600ms ease;
+        /* transition-delay: 0.1s;
+        transition: all 600ms ease; */
         }
 
     nav .bottombar {
@@ -437,6 +694,7 @@ nav .bottombar.fish{
         bottom: 0;
         right: 0;
         left: 300px;
+        
     }
 
     .views {
@@ -458,6 +716,16 @@ nav .bottombar.fish{
         height: 300px;
     }
 
+    nav .links #email {
+        color: white;
+    }
+
+    nav .links #email.fish {
+        color: white;
+    }
+    nav .links #email.leaf {
+        color: white;
+    }
 
     /* Fish View Properties */
 
@@ -471,6 +739,17 @@ nav .bottombar.fish{
 
     .views.fish{
         color: white;
+    }
+
+    #change-theme-window {
+        width: 25%;
+        margin-right: 200px;
+        margin-bottom: 170px;
+        font-size: large;
+    }
+    .bbVideoIframe{
+        width: 500px;
+        height: 281px; 
     }
 
 }
