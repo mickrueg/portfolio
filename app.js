@@ -26,14 +26,15 @@ const changeThemeWindow = document.querySelector(`#change-theme-window`)
 //Query Selectors for elements that are images
 const fish = document.querySelectorAll('#fishView')
 const leaf = document.querySelectorAll('#leafView')
-const fishMobile = document.querySelector('#fishView.mobile')
-const leafMobile = document.querySelector('#leafView.mobile ')
+const fishMobile = document.querySelector('.links .mobile')
+const leafMobile = document.querySelector('.links .mobile ')
 const linkedinMobile = document.querySelector('#linkedin.mobile ')
 const githubMobile = document.querySelector('#github.mobile')
 const sitemapHide = document.querySelectorAll('#sitemap-hide')
 const email = document.querySelector('#email')
 const profilepic = document.querySelector('#profilepic')
 const sitemapText = document.querySelector('.sitemap-text')
+const resumeLinkedin = document.querySelector(`.resume-linkedin`)
 
 //FUNCTIONS-----------------------
 //Close out of mobile window
@@ -59,12 +60,14 @@ fish.forEach((e)=>{
         viewscreen.classList.add(`fish`)
         linkStyle.classList.add(`fish`)
         email.classList.add(`fish`)
+        sitemapText.classList.add(`fish`)
         sitemap.classList.add(`hide`)
         fishMobile.src = `./assets/fishMobileFish.png`
         leafMobile.src = `./assets/leafMobileFish.png`
         githubMobile.src = `./assets/githubMobileFish.png`
         linkedinMobile.src = `./assets/linkedinMobileFish.png`
         hamburger.src = `./assets/hamburgerMobileFish.png`
+        resumeLinkedin.src = `./assets/linkedinMobileFish.png`
         
         exitDropDown();
         
@@ -89,12 +92,14 @@ leaf.forEach((e)=>{
         viewscreen.classList.remove(`fish`)
         linkStyle.classList.remove(`fish`)
         email.classList.remove(`fish`)
+        sitemapText.classList.remove(`fish`)
         sitemap.classList.add(`hide`)
         fishMobile.src = `./assets/fishMobileLeaf.png`
         leafMobile.src = `./assets/leafMobileLeaf.png`
         githubMobile.src = `./assets/githubMobileLeaf.png`
         linkedinMobile.src = `./assets/linkedinMobileLeaf.png`
         hamburger.src = `./assets/hamburgerMobileLeaf.png`
+        resumeLinkedin.src = `./assets/linkedinMobileLeaf.png`
 
         exitDropDown();
     })

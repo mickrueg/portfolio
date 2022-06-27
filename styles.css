@@ -100,6 +100,10 @@ h2{
     cursor: pointer;
 }
 
+#home:hover {
+    border-left: 3px solid white;
+}
+
 
 #sitemap .hover:hover{
     font-weight: 500;
@@ -477,6 +481,49 @@ main {
     display: block;
 }
 
+/* Resume Page */
+.resume-title {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+
+}
+
+h3{
+    margin-bottom: 0;
+}
+
+.resume-content {
+    margin-top: 0;
+    margin-left: 10px;
+}
+
+.resume-linkedin {
+    height: 35px;
+}
+
+.grey-text {
+    font-weight: 400;
+    font-family: 'Source Code Pro', monospace;
+    color: rgb(152, 152, 152);
+    font-size: medium;
+    letter-spacing: -.05em;
+    /* border-style: solid; */
+    /* padding: -5px; */
+}
+
+/* BIO Page */
+.videoWrapper{
+    width: 100%;
+    display: flex;
+}
+
+.bbVideoIframe{
+    margin: 0 auto; 
+    box-shadow: 0px 0px 5px black;
+}
+
 /* Change theme window properties */
 #change-theme-window {
     text-align: center;
@@ -546,6 +593,10 @@ nav .bottombar.fish{
 }
 
 nav .links #email.fish {
+    color: #025762;
+}
+
+.sitemap-text.fish {
     color: #025762;
 }
 
