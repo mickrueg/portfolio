@@ -24,25 +24,6 @@ h2{
     font-size: xx-large;
 }
 
-@keyframes fadeInOpacity {
-    0% {
-        opacity: 0;;
-    }
-    100% {
-        opacity: 1;
-    }
-
-}
-
-@keyframes fadeOutOpacity {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
 .border {
     border-style: solid;
 }
@@ -74,7 +55,6 @@ h2{
     font-size: x-large;
     font-weight: 300;
     line-height: 1.4em;
-    /* box-shadow: inset 0 0 1000px rgb(255, 255, 255,1); */
 }
 
 
@@ -215,10 +195,8 @@ nav .topbar {
 nav .top.expanded {
     height: 650px;
     background-color: rgb(255, 255, 255,0.95);
-    /* display: none; */
     position: fixed;
     width: 100%;
-    /* left: -100%; */
     top: -650px;
     transition-delay: 0.1s;
     transition: all 600ms ease;
@@ -231,8 +209,6 @@ nav .top.expanded.mobile {
     top: 0;
     height: 100%;
     margin-top:0;
-    /* transition-delay: 0.1s;
-    transition: all 600ms ease; */
 }
 
 
@@ -310,7 +286,6 @@ nav .top.expanded .views{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    /* height: 8%; */
 }
 
 
@@ -357,9 +332,6 @@ nav .bottombar.expanded {
 
 .views {
     color: #5f6d6a;
-    /* font-family: 'Source Code Pro', monospace;
-    letter-spacing: 0em;
-    line-height: 2em; */
 }
 
 main {
@@ -370,8 +342,6 @@ main {
     right: 0;
     left: 0;
     width: 100%;
-    /* transition-delay: 0.1s;
-    transition: all 600ms ease; */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -388,33 +358,28 @@ main {
     color: #5f6d6a;
     letter-spacing: .0em;
     font-size: large;
-    overflow: hidden;
     border-radius: 3px;
     display: flex;
-    flex-wrap: nowrap;
     background-color: rgb(236, 236, 236, .9);
 
 }
 .viewscreen a{
-    /* text-decoration: none; */
     color: inherit;
 }
 
 
 /* Home Section Content */
 .viewscreen .home{
-    right: -120%;
-    display: none;
+    opacity: 0;
+    visibility: hidden;
 }
 
 .viewscreen .home.visible{
-    animation-name: fadeInOpacity;
-	animation-iteration-count: 1;
-	animation-timing-function: ease-in;
-	animation-duration: 1s;
-    width: 100%;
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0.1s;
+    transition: all 1000ms ease;
     overflow-y: auto;
-    display: flex;
 }
 
 
@@ -441,7 +406,6 @@ main {
     margin-bottom: -5px;
     align-self: flex-end;
     float: right;
-    /* display: none; */
 }
 
 .home #profilepic:hover  {
@@ -450,41 +414,50 @@ main {
 }
 
 .viewscreen .bio{
-    display: none;
+    position: absolute;
+    height: inherit;
+    width: inherit;
+    visibility: hidden;
+    opacity: 0;
 }
 
 .viewscreen .bio.visible{
-	animation-name: fadeInOpacity;
-	animation-iteration-count: 1;
-	animation-timing-function: ease-in;
-	animation-duration: 1s;
-    width: 100%;
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0.1s;
+    transition: all 1000ms ease;
     overflow-y: auto;
     display: block;
 }
 .viewscreen .projects{
-    display: none;
+    position: absolute;
+    height: inherit;
+    width: inherit;
+    visibility: hidden;
+    opacity: 0;
 }
 
 .viewscreen .projects.visible{
-	animation-name: fadeInOpacity;
-	animation-iteration-count: 1;
-	animation-timing-function: ease-in;
-	animation-duration: 1s;
-    width: 100%;
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0.1s;
+    transition: all 1000ms ease;
     overflow-y: auto;
     display: block;
 }
 .viewscreen .resume{
-    display: none;
+    position: absolute;
+    height: inherit;
+    width: inherit;
+    visibility: hidden;
+    opacity: 0;
 }
 
 .viewscreen .resume.visible{
-	animation-name: fadeInOpacity;
-	animation-iteration-count: 1;
-	animation-timing-function: ease-in;
-	animation-duration: 1s;
-    width: 100%;
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0.1s;
+    transition: all 1000ms ease;
     overflow-y: auto;
     display: block;
 }
@@ -517,11 +490,9 @@ h3{
     color: rgb(152, 152, 152);
     font-size: medium;
     letter-spacing: -.05em;
-    /* border-style: solid; */
-    /* padding: -5px; */
 }
 
-/* BIO Page */
+/* BIO Page - styling for video. Video code was copy/pasted from bombbomb.com's website (they provided embed code)*/
 .videoWrapper{
     width: 100%;
     display: flex;
@@ -598,7 +569,6 @@ nav .bottombar.fish{
     color: #025762;
 }
 .viewscreen a.fish{
-    /* text-decoration: none; */
     color: #025762;
 }
 
@@ -612,7 +582,6 @@ nav .links #email.fish {
 
 
 /* Desktop Properties */
-
 @media (min-width: 700px) {
     
     body {
@@ -636,9 +605,7 @@ nav .links #email.fish {
         background-color: rgb(95, 109, 106, 0.4);
         top: 0;
         margin-top: 0;
-        /* transition-delay: 0.1s;
-        transition: all 600ms ease; */
-        }
+    }
 
     nav .bottombar {
         display:none;
@@ -650,8 +617,6 @@ nav .links #email.fish {
     nav .x, .whitespace {
         display: none;
     }
-
-
 
     nav .top.expanded .name{
         padding: 0;
