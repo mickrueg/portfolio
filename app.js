@@ -30,7 +30,7 @@ const fishMobile = document.querySelector('.links .mobile')
 const leafMobile = document.querySelector('.links .mobile ')
 const linkedinMobile = document.querySelector('#linkedin.mobile ')
 const githubMobile = document.querySelector('#github.mobile')
-const sitemapHide = document.querySelectorAll('#sitemap-hide')
+const sitemapShow = document.querySelectorAll('#sitemap-show')
 const email = document.querySelector('#email')
 const profilepic = document.querySelector('#profilepic')
 const sitemapText = document.querySelector('.sitemap-text')
@@ -167,9 +167,9 @@ profilepic.addEventListener('click', ()=>{
     changeThemeWindow.classList.toggle('hide')
 })
 
-sitemapHide.forEach((e)=>{
+sitemapShow.forEach((e)=>{
     e.addEventListener('click', ()=>{
-        sitemap.classList.toggle('hide')
+        sitemap.classList.remove('hide')
         changeThemeWindow.classList.add('hide')
     })
 })

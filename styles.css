@@ -51,6 +51,7 @@ h2{
 #sitemap {
     height: 100%;
     width: 100%;
+    
 }
 
 #backlayer{
@@ -72,6 +73,7 @@ h2{
     /* box-shadow: inset 0 0 1000px rgb(255, 255, 255,1); */
 }
 
+
 #sitemap b{
     font-weight: 500;
 }
@@ -90,6 +92,7 @@ h2{
 #sitemap.hide {
     /* display: none; */
     visibility: hidden;
+    /* overflow: hidden; */
     opacity: 0;
     transition-delay: 0.1s;
     transition: all 1500ms ease;
@@ -142,6 +145,10 @@ h2{
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
+}
+
+.intro-text-first-line:hover {
+    padding-left: 7px;
 }
 
 .intro-text-first-line .x {
