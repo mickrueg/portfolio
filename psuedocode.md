@@ -37,6 +37,7 @@ viewscreen `color: #ffffff; opacity: 85;`
 
 assets
 
+- Mountain background is from [Pexels.com / Pascal Lottenbach](https://www.pexels.com/@pascal-lottenbach-644965/)
 - LinkedIn logo `color: #5f6d6a`
 -  Github logo `color: #5f6d6a`
 
@@ -62,6 +63,8 @@ assets
 -  Github logo `color: #ffffff`
 
 ## Fish Theme
+
+fish background pic is from [Pexels.com Pok Rie photographer](https://www.pexels.com/@pok-rie-33563/)
 
 fish navbar name `color: #025762;`
 
