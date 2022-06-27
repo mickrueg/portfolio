@@ -63,7 +63,7 @@ h2{
     align-content: center;
     z-index: 3;
     color: white;
-    background-color: rgba(162, 171, 169,.94);
+    background-color: rgba(162, 171, 169);
     font-family: 'Source Code Pro', monospace;
     letter-spacing: 0em;
     font-size: x-large;
@@ -492,7 +492,7 @@ main {
     bottom: 0;
     margin-bottom: 110px;
     color: white;
-    background-color: rgba(162, 171, 169,.94);
+    background-color: rgba(162, 171, 169);
     font-family: 'Source Code Pro', monospace;
     font-weight: 400;
     font-size: large;
