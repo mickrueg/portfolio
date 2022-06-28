@@ -14,6 +14,7 @@ body {
     margin: 0;
     display: flex;
     flex-wrap: wrap;
+    /* edits */
 }
 
 h2{
@@ -349,19 +350,19 @@ main {
 }
 
 .viewscreen {
-    height: 80%;
+    height: 90%;
     width: 70%;
     padding-left: 20px;
     padding-top: 10px;
     padding-right: 20px;
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
     color: #5f6d6a;
     letter-spacing: .0em;
     font-size: large;
     border-radius: 3px;
     display: flex;
     background-color: rgb(236, 236, 236, .9);
-
+    /* edits */
 }
 .viewscreen a{
     color: inherit;
@@ -372,6 +373,7 @@ main {
 .viewscreen .home{
     opacity: 0;
     visibility: hidden;
+    /* edit */
 }
 
 .viewscreen .home.visible{
@@ -380,6 +382,8 @@ main {
     transition-delay: 0.1s;
     transition: all 1000ms ease;
     overflow-y: auto;
+    /* edits */
+
 }
 
 
@@ -406,6 +410,7 @@ main {
     margin-bottom: -5px;
     align-self: flex-end;
     float: right;
+    /* edit */
 }
 
 .home #profilepic:hover  {
@@ -419,6 +424,7 @@ main {
     width: inherit;
     visibility: hidden;
     opacity: 0;
+    /* edit */
 }
 
 .viewscreen .bio.visible{
@@ -435,6 +441,7 @@ main {
     width: inherit;
     visibility: hidden;
     opacity: 0;
+    /* edit */
 }
 
 .viewscreen .projects.visible{
@@ -451,6 +458,7 @@ main {
     width: inherit;
     visibility: hidden;
     opacity: 0;
+    /* edit */
 }
 
 .viewscreen .resume.visible{
@@ -460,6 +468,8 @@ main {
     transition: all 1000ms ease;
     overflow-y: auto;
     display: block;
+    /* edit */
+    
 }
 
 /* Resume Page */
