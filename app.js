@@ -165,11 +165,13 @@ resumeButton.forEach((e)=>{
 
 profilepic.addEventListener('click', ()=>{
     changeThemeWindow.classList.toggle('hide')
+    profilepic.classList.toggle(`clicked`)
 })
 
 sitemapShow.forEach((e)=>{
     e.addEventListener('click', ()=>{
         sitemap.classList.remove('hide')
         changeThemeWindow.classList.add('hide')
+        profilepic.classList.remove(`clicked`)
     })
 })

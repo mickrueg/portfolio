@@ -411,9 +411,9 @@ main {
     height: 200px;
     z-index: 1;
     right: 0;
-    margin-right: -5px;
+    margin-right: -6px;
     bottom: 0;
-    margin-bottom: -5px;
+    margin-bottom: -12px;
     align-self: flex-end;
     float: right;
 }
@@ -421,6 +421,11 @@ main {
 .home #profilepic:hover  {
     bottom: 5px;
     right: 2px;
+}
+
+.home #profilepic.clicked {
+    bottom: 12px;
+    right: 6px;
 }
 
 .viewscreen .bio{
@@ -522,7 +527,7 @@ h3{
     position: absolute;
     width: 55%;
     height: auto;
-    z-index: 1;
+    z-index: 2;
     border-radius: 5px;
     padding: 5px;
     right: 0;
