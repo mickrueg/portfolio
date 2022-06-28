@@ -1,3 +1,10 @@
+html{
+    /* edit */
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
 body {
     background-image: url('./assets/leafBackground.jpg');
     background-size: cover;
@@ -14,6 +21,8 @@ body {
     margin: 0;
     display: flex;
     flex-wrap: wrap;
+    /* edit */
+    position: relative;
 }
 
 h2{
@@ -349,19 +358,17 @@ main {
 }
 
 .viewscreen {
-    height: 80%;
+    height: 90%;
     width: 70%;
     padding-left: 20px;
     padding-top: 10px;
     padding-right: 20px;
-    padding-bottom: 20px;
     color: #5f6d6a;
     letter-spacing: .0em;
     font-size: large;
     border-radius: 3px;
     display: flex;
     background-color: rgb(236, 236, 236, .9);
-
 }
 .viewscreen a{
     color: inherit;
@@ -372,6 +379,7 @@ main {
 .viewscreen .home{
     opacity: 0;
     visibility: hidden;
+    /* edit */
 }
 
 .viewscreen .home.visible{
@@ -380,6 +388,8 @@ main {
     transition-delay: 0.1s;
     transition: all 1000ms ease;
     overflow-y: auto;
+    /* edits */
+
 }
 
 
@@ -396,14 +406,14 @@ main {
 
 
 .home #profilepic{
-    position: absolute;
+    position: fixed;
     width: 200px;
     height: 200px;
     z-index: 1;
     right: 0;
-    margin-right: -5px;
+    margin-right: -6px;
     bottom: 0;
-    margin-bottom: -5px;
+    margin-bottom: -12px;
     align-self: flex-end;
     float: right;
 }
@@ -411,6 +421,11 @@ main {
 .home #profilepic:hover  {
     bottom: 5px;
     right: 2px;
+}
+
+.home #profilepic.clicked {
+    bottom: 12px;
+    right: 6px;
 }
 
 .viewscreen .bio{
@@ -512,7 +527,7 @@ h3{
     position: absolute;
     width: 55%;
     height: auto;
-    z-index: 1;
+    z-index: 2;
     border-radius: 5px;
     padding: 5px;
     right: 0;
