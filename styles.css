@@ -1,3 +1,10 @@
+html{
+    /* edit */
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
 body {
     background-image: url('./assets/leafBackground.jpg');
     background-size: cover;
@@ -14,7 +21,8 @@ body {
     margin: 0;
     display: flex;
     flex-wrap: wrap;
-    /* edits */
+    /* edit */
+    position: relative;
 }
 
 h2{
@@ -355,14 +363,12 @@ main {
     padding-left: 20px;
     padding-top: 10px;
     padding-right: 20px;
-    /* padding-bottom: 20px; */
     color: #5f6d6a;
     letter-spacing: .0em;
     font-size: large;
     border-radius: 3px;
     display: flex;
     background-color: rgb(236, 236, 236, .9);
-    /* edits */
 }
 .viewscreen a{
     color: inherit;
@@ -400,7 +406,7 @@ main {
 
 
 .home #profilepic{
-    position: absolute;
+    position: fixed;
     width: 200px;
     height: 200px;
     z-index: 1;
@@ -410,7 +416,6 @@ main {
     margin-bottom: -5px;
     align-self: flex-end;
     float: right;
-    /* edit */
 }
 
 .home #profilepic:hover  {
@@ -424,7 +429,6 @@ main {
     width: inherit;
     visibility: hidden;
     opacity: 0;
-    /* edit */
 }
 
 .viewscreen .bio.visible{
@@ -441,7 +445,6 @@ main {
     width: inherit;
     visibility: hidden;
     opacity: 0;
-    /* edit */
 }
 
 .viewscreen .projects.visible{
@@ -458,7 +461,6 @@ main {
     width: inherit;
     visibility: hidden;
     opacity: 0;
-    /* edit */
 }
 
 .viewscreen .resume.visible{
@@ -468,8 +470,6 @@ main {
     transition: all 1000ms ease;
     overflow-y: auto;
     display: block;
-    /* edit */
-    
 }
 
 /* Resume Page */
