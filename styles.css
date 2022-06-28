@@ -89,6 +89,8 @@ h2{
     transition: all 700ms ease;
 }
 
+/* Hover animations */
+
 .hover{
     cursor: pointer;
 }
@@ -125,6 +127,12 @@ h2{
 .x.hover {
     font-weight: 300;
 }
+
+.resume-linkedin:hover{
+    margin-top: -5px;
+}
+
+/* Sitemap formatting */
 
 .sitemap-text {
     letter-spacing: 0em;
