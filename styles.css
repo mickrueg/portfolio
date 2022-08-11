@@ -1,3 +1,25 @@
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(136, 136, 136, 0.331);
+}
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(136, 136, 136);;
+  }
+
+
 html{
     /* edit */
     position: relative;
@@ -370,7 +392,7 @@ main {
 
 .viewscreen {
     height: 90%;
-    width: 70%;
+    width: 80%;
     padding-left: 20px;
     padding-top: 10px;
     padding-right: 20px;
@@ -468,6 +490,7 @@ main {
     opacity: 1;
     transition-delay: 0.1s;
     transition: all 1000ms ease;
+    overflow-x: hidden;
     overflow-y: auto;
     display: block;
 }
@@ -623,6 +646,16 @@ nav .links #email.fish {
     border-radius: 5px;
 }
 
+.ProjectImage:hover{
+    opacity: .5;
+    scale: 1.005;
+}
+
+.ProjectImage:active{
+    scale: 1.025;
+}
+
+
 
 /* Desktop Properties */
 @media (min-width: 700px) {
@@ -775,10 +808,6 @@ nav .links #email.fish {
         margin: 10px;
         box-shadow: 0px 0px 10px 0px;
         border-radius: 5px;
-    }
-
-    .ProjectImage:hover{
-        opacity: .5;
     }
 
 }
