@@ -551,10 +551,11 @@ h3{
 }
 
 .bbVideoIframe{
-    width: 250px;
-    height: 140px; 
-    box-shadow: 0px 0px 5px black;
-    margin: 0 auto; 
+    width: 100%;
+    height: 250px; 
+    margin: 10px;
+    box-shadow: 0px 0px 10px 0px;
+    border-radius: 5px;
 }
 
 .bbVideoIframe:hover{
@@ -796,8 +797,8 @@ nav .links #email.fish {
         font-size: large;
     }
     .bbVideoIframe{
-        width: 500px;
-        height: 281px; 
+        /* width: 400px;
+        height: 225px;  */
     }
 
     .ProjectContainer{
