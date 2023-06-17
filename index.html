@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="./assets/leafMobileLeaf.png">
     <style> 
-        @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;500&display=swap');
     </style>
     <!-- import Google Icons -->
@@ -29,12 +29,12 @@
                         <br>&nbsp &nbsp<a id="fishView" class="view-hover">BEACH</a><b>/ </b><a id="leafView" class="view-hover">MOUNTAIN</a>
                     </p>
                     <p class="section-hover">
-                        02 <a id="bio" class="hover">bio</a><br>
+                        02 <a id="bio" class="hover">about</a><br>
                         &nbsp &nbsp<a id="projects"class="hover">projects</a><br> 
                         &nbsp &nbsp<a id="resume"class="hover">resume</a>
                     </p>
                     <p class="section-hover">
-                        03 <a href = "mailto: mickrueg@gmail.com" class="hover">email</a><br>
+                        03 <a href = "mailto:mickrueg@gmail.com" class="hover">email</a><br>
                         &nbsp &nbsp<a href="https://www.linkedin.com/in/mike-krueger-6063a9121" target="_blank" class="hover">linkedin</a><br>
                         &nbsp &nbsp<a href="https://github.com/mickrueg" target="_blank" class="hover">github</a><br>
                     </p>
@@ -51,13 +51,13 @@
                 <span class="material-symbols-outlined x hover"> expand_less </span>
             </div>
             <ul>
-                <li><span class="highlighted hover" id="bio">BIO</span></li>
-                <li><span class="highlighted hover" id="projects">PROJECTS</span></li>
-                <li><span class="highlighted hover" id="resume">RESUME</span></li>
+                <li class="expand"><span class="highlighted hover" id="bio">ABOUT</span></li>
+                <li class="expand"><span class="highlighted hover" id="projects">PROJECTS</span></li>
+                <li class="expand"><span class="highlighted hover" id="resume">RESUME</span></li>
             </ul>
             <div class="links">
-                <a href = "mailto: mickrueg@gmail.com">
-                    <span href = "mailto: mickrueg@gmail.com"class="material-symbols-outlined hover" id="email">mail</span>
+                <a href = "mailto:mickrueg@gmail.com">
+                    <span href = "mailto:mickrueg@gmail.com"class="material-symbols-outlined hover" id="email">mail</span>
                 </a>
                 <a href="https://www.linkedin.com/in/mike-krueger-6063a9121" target="_blank">
                     <img src="./assets/linkedinMobileLeaf.png" alt="Click to go to Mike Krueger's LinkedIn account." id="linkedin" class="mobile hover">
@@ -86,50 +86,95 @@
     </nav>
     <main>
         <section class="viewscreen">
-            <div class="home visible">
+            <div class="home">
                 <div class="text">
                     <h2>WELCOME</h2><br>
-                    Hey there! My name is <b>Mike</b> and I am a <b>software engineer</b>. I have a knack for building clean web applications and my peers would describe me as a <b>self-starter, strong communicator,</b> and <b>average rock climber.</b><br><br>I build in <b>HTML, CSS, JavaScript, Google Apps Script</b>, and more. Check out my <b id="bio" class="hover"><u>bio</u></b> to learn more about me and my role at <b>Move Mortgage</b>. See my <b id="projects" class="hover"><u>projects</u></b> for a sample of previous works. <br><br>If you need to reach me, you can find me here! <br><br>
-                    &nbsp; &nbsp; &nbsp; &nbsp;<span class="material-symbols-outlined">home_pin</span>&nbsp&nbspDenver, CO <br>
-                    &nbsp; &nbsp; &nbsp; &nbsp;<span class="material-symbols-outlined">mail</span>&nbsp&nbsp<b>W:</b> <a href = "mailto: mike@movemortgage.com">mike@movemortgage.com</a><br>
-                    &nbsp; &nbsp; &nbsp; &nbsp;<span class="material-symbols-outlined">mail</span>&nbsp&nbsp<b>P:</b> <a href = "mailto: mickrueg@gmail.com">mickrueg@gmail.com</a><br>
+                    Hey there! My name is <b>Mike</b> and I am a <b>software engineer</b>. I have a knack for <b>building clean web applications</b> and my peers describe me as a <b>self-starter, strong communicator,</b> and <b>average rock climber.</b><br><br>I build in <b>React, CSS, JavaScript, Google Apps Script</b>, and more. Check out the <span id="bio" class="hover"><u>about</u></span> page to learn more about me and my role at Move Mortgage. See my <span id="projects" class="hover"><u>projects</u></span> for a sample of previous works. <br><br>To reach me, please see my contact info below... <br><br>
+                    &nbsp; &nbsp; &nbsp; &nbsp;<span class="material-symbols-outlined">home_pin</span>&nbsp&nbspLocation: Denver, CO <br>
+                    &nbsp; &nbsp; &nbsp; &nbsp;<span class="material-symbols-outlined">mail</span>&nbsp&nbspW: <a href = "mailto:mike@movemortgage.com">mike@movemortgage.com</a><br>
+                    &nbsp; &nbsp; &nbsp; &nbsp;<span class="material-symbols-outlined">mail</span>&nbsp&nbspP: <a href = "mailto:mickrueg@gmail.com">mickrueg@gmail.com</a><br>
                     &nbsp; &nbsp; &nbsp; &nbsp;<span class="material-symbols-outlined">group_add</span>&nbsp&nbsp<a href = "https://www.linkedin.com/in/mike-krueger-6063a9121" target="_blank">LinkedIn</a><br>
                     &nbsp; &nbsp; &nbsp; &nbsp;<span class="material-symbols-outlined">devices</span>&nbsp&nbsp<a href = "https://github.com/mickrueg/"target="_blank">GitHub</a><br>
                 </div>
                 <img src="./assets/head2.png" alt="profile picture with transparent background" id="profilepic">
             </div>
             <div class="bio">
-                <h2>BIO</h2>
+                <h2>ABOUT</h2>
                 <p>
-                    I am the <b>lead software engineer</b> for one of Colorado's best mortgage brokerages. <b>Move Mortgage</b> is a startup company that assists clients with purchase and refinance home loans. 
-                    <br><br>
-                    As part of our team, I am responsible for building and maintaining the following:
+                    I am the <b>lead software engineer</b> for one of Colorado's best mortgage brokerages. Move Mortgage is a startup company that assists clients with purchasing and refinancing their home loans. My role is to build and maintain the following:
                     <ul>
                         <li><b>Client Facing:</b> Animated instructional videos and automated email notifications</li>
                         <li><b>Internal Tools:</b> Loan progress tracking and automated third party item requests</li>
                     </ul>
-                    My approach to building for my team is from the ground up. When I joined <b>Move Mortgage</b>, I started as a licensed mortgage loan officer and worked directly with our clients to provide an excellent loan experience. You can see the past reviews I received <b><a href="https://www.zillow.com/lender-profile/michaelkrueger38/" class="hover">here (Zillow.com)</a></b>.
+                    My approach to building for my team is from the ground up. I originally joined our team as a licensed mortgage loan officer and worked directly with our clients to provide an excellent loan experience. You can see past reviews <b><a href="https://www.zillow.com/lender-profile/michaelkrueger38/" class="hover">here (Zillow.com)</a></b>.
                     <br><br>
-                    As I continued to master my craft, I transitioned from sales to software engineering where my sole focus now is to redesign and improve our clients' experience. Today, all <b>Move Mortgage</b> clients receive tailored content that is automated through the tools I have built. This content includes email status notifications and animated instructional videos like the one below.
+                    As I continued to master my craft, I transitioned from sales to software engineering where my sole focus now is to redesign and improve our clients' experience. Today, all Move Mortgage clients receive tailored content that is automated through the tools my team and I have built. This content includes email status notifications and animated instructional videos.
                     <br><br>
-                    Our team is hard at work with ambitious goals for the future of <b>Move Mortgage</b>! I am excited for what we will build.
-                    <br><br>
-                    <hr><b>Sample Content</b><br>Animated Welcome Video<br><br>
-                    <div class="videoWrapper" data-videoid="d0b5ce87-19ff-3727-9c1c-309f9b369a5f">
-                        <iframe class="bbVideoIframe" data-video-player-id="0052c94a-77e4-fad2-526a-55b94c4baf8a" width="500" height="281" src="https://bbemaildelivery.com/bbext/?p=vidEmbed&id=d0b5ce87-19ff-3727-9c1c-309f9b369a5f&ar=0&videoPlayerId=0052c94a-77e4-fad2-526a-55b94c4baf8a" frameborder="0" scrolling="no" mozallowfullscreen webkitallowfullscreen allowfullscreen></iframe>
-                    </div>
+                    Our team is hard at work with ambitious goals for the future of Move Mortgage! I am excited for what we will build.
                     <br><br>
                 </p>
             </div>
-            <div class="projects">
+            <div class="projects visible">
                 <h2>PROJECTS</h2>
+                <span>Please see the collection of software projects I have worked on below. All projects were built in VSCode and Github/Git was used to track code development.</span><br><br>
+                <h2>WEB DEVELOPMENT</h2>
+                <h3>2023</h3>
+                <hr>
+                <div class="ProjectContainer">
+                    <a href="https://transllate.netlify.app/" target="_blank" rel="noopener noreferrer">
+                        <img src="./assets/transl.ate.png" class="ProjectImage"/>
+                    </a>
+                    <span class="ProjectText"><b>transl.ate</b> | <a href="https://transllate.netlify.app/" target="_blank" rel="noopener noreferrer">Live</a> | <a href="https://github.com/mickrueg/transl.ate" target="_blank" rel="noopener noreferrer">Github</a>
+                    <br>An AI web application built in React. Built to be as familiar of a userface as Google Translate, but with the funtionality of translating between two coding languages (or English and a coding language).</span><br>
+                </div>
+                <h3>2022</h3>
+                <hr>
+                <div class="ProjectContainer">
+                    <a href="https://nift-app.netlify.app/" target="_blank" rel="noopener noreferrer">
+                        <img src="./assets/NiFT.png" class="ProjectImage"/>
+                    </a>
+                    <span class="ProjectText"><b>NiFT Web Application</b> | <a href="https://nift-app.netlify.app/" target="_blank" rel="noopener noreferrer">Live</a> | <a href="https://github.com/mickrueg/nift-frontend" target="_blank" rel="noopener noreferrer">Github (Front End)</a> | <a href="https://github.com/mickrueg/nift-backend-two" target="_blank" rel="noopener noreferrer">Github (Back End)</a>
+                    <br>A web application that allows users to learn about NFTs, read related news articles, and explore the actual NFT marketplace. Users can save articles and NFTs to their account for future reference. Built with MERN stack (MongoDB, Express, React JS, and Node).</span><br>
+                </div>
+                <div class="ProjectContainer">
+                    <a href="https://jonah-wisneski.netlify.app/" target="_blank" rel="noopener noreferrer">
+                        <img src="./assets/JonahWisneski.png" class="ProjectImage"/>
+                    </a>
+                    <span class="ProjectText"><b>Artist Website</b> | <a href="https://jonah-wisneski.netlify.app/" target="_blank" rel="noopener noreferrer">Live</a> | <a href="https://github.com/mickrueg/jonah-wisneski" target="_blank" rel="noopener noreferrer">Github</a>
+                    <br>Beautiful and dramatic website designed for a Denver artist to display their music, background, and happenings. Built using React JS and is fully functional on mobile and desktop.</span><br>
+                </div>
+                <div class="ProjectContainer">
+                    <a href="https://agree-to-disagree.netlify.app/" target="_blank" rel="noopener noreferrer">
+                        <img src="./assets/AgreeToDisagree.png" class="ProjectImage"/>
+                    </a>
+                    <span class="ProjectText"><b>Agree to Disagree</b> | <a href="https://agree-to-disagree.netlify.app/" target="_blank" rel="noopener noreferrer">Live</a> | <a href="https://github.com/Celestial-Dwarf/agree-to-disagree" target="_blank" rel="noopener noreferrer">Github (Front End)</a> | <a href="https://github.com/Celestial-Dwarf/agree-to-disagree_backend" target="_blank" rel="noopener noreferrer">Github (Back End)</a>
+                        <br>This fun animated web application lets users play a game to help determine what the user and their partner should eat for dinner. My role in this group project was to design the wireframes and implement ReactJS functionality and CSS for an enjoyable user experience.</span><br>
+                </div>
                 <div class="ProjectContainer">
                     <a href="https://mickrueg-meal-prep.netlify.app/" target="_blank" rel="noopener noreferrer">
                         <img src="./assets/MealPrep.png" class="ProjectImage"/>
                     </a>
-                    <span class="ProjectText"><b>Meal Prep</b><br>This mobile and desktop friendly web application helps procrastinators with quickly creating a grocery list. Backed by thousands of real recipes, this app consolidates the ingredients needed for all intended recipes in a simple format.</span>
+                    <span class="ProjectText"><b>Meal Prep</b> | <a href="https://mickrueg-meal-prep.netlify.app/" target="_blank" rel="noopener noreferrer">Live</a> | <a href="https://github.com/mickrueg/meal-prep" target="_blank" rel="noopener noreferrer">Github</a>
+                        <br>This mobile and desktop friendly web application helps users with quickly creating a grocery list. Backed by thousands of real recipes, this app consolidates the ingredients needed for all intended recipes in a simple format. Built in React JS.</span><br>
+                </div>
+                <div class="ProjectContainer">
+                    <a href="https://mickrueg-meal-prep.netlify.app/" target="_blank" rel="noopener noreferrer">
+                        <img src="./images/Screen Shot 2022-06-28 at 10.48.26 AM.png" class="ProjectImage"/>
+                    </a>
+                    <span class="ProjectText"><b>Personal Portfolio</b> | <a href="https://mikekrueger.netlify.app/" target="_blank" rel="noopener noreferrer">Live</a> | <a href="https://github.com/mickrueg/portfolio" target="_blank" rel="noopener noreferrer">Github</a>
+                        <br>This mobile and desktop friendly web application helps users with quickly creating a grocery list. Backed by thousands of real recipes, this app consolidates the ingredients needed for all intended recipes in a simple format. Built in React JS.</span><br>
                 </div>
                 <br><br>
+                <h2>VIDEO & AUDIO</h2>
+                <h3>2021</h3>
+                <hr>
+                <div class="ProjectContainer">
+                    <div class="videoWrapper" data-videoid="d0b5ce87-19ff-3727-9c1c-309f9b369a5f">
+                        <iframe class="bbVideoIframe" src="https://www.youtube.com/embed/BdQCwkouvmo" title="Move Mortgage - Assisting Homebuyers" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div> 
+                    <span class="ProjectText"><b>Animated Video Series</b>
+                    <br>Informational and instructional video series built for Move Mortgage. This series saves 1+ hour of phone call time previously spent per client.</span><br>
+                </div>
             </div>
             <div class="resume">
                 <div class="resume-title">
@@ -148,7 +193,7 @@
                         <b>Loan Engineer<br><span class="grey-text">2/21 - 5/22 (1.5yr)</span></b><br>
                         Build and maintain advanced Google Sheets database to track client data and deadlines. Educate myself on the use of Google Apps Script (JavaScript, HTML) and implement customized task automations that make quick loan reviews possible. Develop easy-to-use office wide systems to dramatically reduce company hours spent on repetitive tasks.
                         <br><br>
-                        <b>Loan Specialist<br><span class="grey-text">6/21 - 5/22 (1yr)</span></b><br>
+                        <b>Loan Specialist<br><span class="grey-text">6/20 - 2/21 (&#60;1yr)</span></b><br>
                     </p>
                 </p>
                 <br>

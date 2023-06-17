@@ -1,3 +1,25 @@
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(136, 136, 136, 0.331);
+}
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(136, 136, 136);;
+  }
+
+
 html{
     /* edit */
     position: relative;
@@ -23,6 +45,9 @@ body {
     flex-wrap: wrap;
     /* edit */
     position: relative;
+}
+body b{
+    font-weight: 600;
 }
 
 h2{
@@ -154,9 +179,12 @@ h2{
     font-size: 35px;
 }
 
-.highlighted.hover:hover {
-    margin-left: 5px;
-    font-weight: 400;
+.expand:hover{
+    opacity: .5;
+}
+
+.expand:active{
+    scale: 1.1;
 }
 
 
@@ -367,7 +395,7 @@ main {
 
 .viewscreen {
     height: 90%;
-    width: 70%;
+    width: 80%;
     padding-left: 20px;
     padding-top: 10px;
     padding-right: 20px;
@@ -465,6 +493,7 @@ main {
     opacity: 1;
     transition-delay: 0.1s;
     transition: all 1000ms ease;
+    overflow-x: hidden;
     overflow-y: auto;
     display: block;
 }
@@ -522,10 +551,15 @@ h3{
 }
 
 .bbVideoIframe{
-    width: 250px;
-    height: 140px; 
-    box-shadow: 0px 0px 5px black;
-    margin: 0 auto; 
+    width: 100%;
+    height: 250px; 
+    margin: 10px;
+    box-shadow: 0px 0px 10px 0px;
+    border-radius: 5px;
+}
+
+.bbVideoIframe:hover{
+    opacity: .5;
 }
 
 /* Change theme window properties */
@@ -619,6 +653,16 @@ nav .links #email.fish {
     box-shadow: 0px 0px 10px 0px;
     border-radius: 5px;
 }
+
+.ProjectImage:hover{
+    opacity: .5;
+    scale: 1.005;
+}
+
+.ProjectImage:active{
+    scale: 1.025;
+}
+
 
 
 /* Desktop Properties */
@@ -753,8 +797,8 @@ nav .links #email.fish {
         font-size: large;
     }
     .bbVideoIframe{
-        width: 500px;
-        height: 281px; 
+        /* width: 400px;
+        height: 225px;  */
     }
 
     .ProjectContainer{
@@ -772,10 +816,6 @@ nav .links #email.fish {
         margin: 10px;
         box-shadow: 0px 0px 10px 0px;
         border-radius: 5px;
-    }
-
-    .ProjectImage:hover{
-        opacity: .5;
     }
 
 }
